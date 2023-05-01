@@ -1,0 +1,18 @@
+Blockchain,Segment,Interval,Metric
+Arbitrum,Addresses,Daily,Active Users
+Avalanche,Addresses,Daily,Active Users
+Optimism,Addresses,Daily,Active Users
+Polygon,Addresses,Daily,Active Users
+Gnosis,Addresses,Daily,New Users
+Avalanche,Addresses,Daily,New Users
+Solana,Swaps,Daily,Swappers
+Osmosis,Swaps,Daily,Swappers
+Ethereum,Swaps,Daily,Transactions
+Avalanche,Swaps,Daily,Transactions
+Polygon,Swaps,Daily,Transactions
+Arbitrum,Transactions,Daily,Total Count
+Avalanche,Transactions,Daily,Total Count
+Optimism,Transactions,Daily,Total Count
+Polygon,Transactions,Daily,Total Count
+Optimism,Transactions,Daily,TPS
+Avalanche,Transactions,Daily,TPS
