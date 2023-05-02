@@ -11,7 +11,7 @@ st.set_page_config(page_title='Outlier', page_icon=':bar_chart:', layout='wide')
 
 # Global Variables
 theme_plotly = 'streamlit' # None or streamlit
-queries = pd.read_csv('data/queries.csv')
+queries = pd.read_csv('data/charts.csv')
 segments = queries['Segment'].unique()
 metrics = queries.loc[queries['Segment'] == 'Transactions', 'Metric'].unique()
 week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -21,12 +21,10 @@ def get_data():
     data_file = f"data/{st.session_state.option_segments.lower()}_daily_{st.session_state.option_metrics.lower().replace(' ', '_')}.csv"
     df = pd.read_csv(data_file)
 
-    if df['date'].iloc[0] == str(date.today() - timedelta(2)):
-        print('up to date')
-        return df
+    if df['date'].iloc[0] >= str(date.today() - timedelta(2)):
+        return df.query("blockchain == @st.session_state.option_blockchains")
     
     else:
-        print('not up to date')
         API_KEY = st.secrets["API_KEY"]
         sdk = ShroomDK(API_KEY)
 
@@ -66,7 +64,7 @@ with st.sidebar:
         options=segments,
         key='option_segments'
     )
-    
+
     # Metrics
     option_metrics = st.selectbox(
         '**Metric**',
@@ -85,24 +83,19 @@ with st.sidebar:
 # Content
 df = get_data()
 
-date_range = pd.date_range(df['date'].min(), df['date'].max())
-# datetime.strptime(df['date'].min(), '%m-%d-%Y').date()
 # Filters
-# option_dates = st.select_slider('**Date Range**', options=date_range, value=(df['date'].min(), df['date'].max()), key='option_dates')
 option_dates = st.slider(
     '**Date Range**',
-    min_value=datetime.strptime(df['date'].min(), '%Y-%m-%d').date(),
+    min_value=datetime.strptime('2021-01-01', '%Y-%m-%d').date(),
     max_value=datetime.strptime(df['date'].max(), '%Y-%m-%d').date(),
-    value=(datetime.strptime(df['date'].min(), '%Y-%m-%d').date(), datetime.strptime(df['date'].max(), '%Y-%m-%d').date()),
+    value=(datetime.strptime('2023-01-01', '%Y-%m-%d').date(), datetime.strptime(df['date'].max(), '%Y-%m-%d').date()),
     key='option_dates'
 )
 
-st.header("Daily Active Users")
-
 df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
-
 df = df.query("date >= @st.session_state.option_dates[0] & date <= @st.session_state.option_dates[1]")
 
+# Chart
 fig = px.line(df, x='date', y=df[df.columns[1]], color='blockchain', custom_data=['blockchain'])
 fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=df.columns[1], hovermode='x unified')
 fig.update_traces(hovertemplate='%{customdata}: %{y:,.0f}<extra></extra>')
