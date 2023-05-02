@@ -1,6 +1,6 @@
 select
   block_timestamp::date as date,
-  count(distinct from_address) as users
+  count(distinct tx_hash) as users
 from
   arbitrum.core.fact_transactions
 where
