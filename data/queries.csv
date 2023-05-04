@@ -1,0 +1,20 @@
+Segment,Metric,Blockchain,Aggregation,Query
+Addresses,Active Users,Arbitrum,Blockchain,
+Addresses,Active Users,Avalanche,Blockchain,
+Addresses,Active Users,Axelar,Blockchain,
+Addresses,Active Users,BSC,Blockchain,
+Addresses,Active Users,Cosmos,Blockchain,
+Addresses,Active Users,Ethereum,Blockchain,
+Addresses,Active Users,Gnosis,Blockchain,
+Addresses,Active Users,NEAR,Blockchain,
+Addresses,Active Users,Optimism,Blockchain,
+Addresses,Active Users,Osmosis,Blockchain,
+Addresses,Active Users,Polygon,Blockchain,
+Addresses,Active Users,Solana,Blockchain,
+Transactions,Total Count,Arbitrum,Blockchain,
+Transactions,Total Count,Avalanche,Blockchain,
+Transactions,Total Count,Ethereum,Blockchain,
+Transactions,Total Count,Optimism,Blockchain,
+Transactions,Total Count,Polygon,Blockchain,
+Swaps,Total Count,Ethereum,DEX,25750f1e-db78-4f02-903a-fa76b5251962
+Swaps,Total Count,Solana,DEX,c9a62a8c-5bdf-47bc-a96b-31de4400d10a

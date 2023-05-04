@@ -1,18 +1,4 @@
-Blockchain,Segment,Interval,Metric
-Arbitrum,Addresses,Daily,Active Users
-Avalanche,Addresses,Daily,Active Users
-Axelar,Addresses,Daily,Active Users
-BSC,Addresses,Daily,Active Users
-Cosmos,Addresses,Daily,Active Users
-Ethereum,Addresses,Daily,Active Users
-Gnosis,Addresses,Daily,Active Users
-NEAR,Addresses,Daily,Active Users
-Optimism,Addresses,Daily,Active Users
-Osmosis,Addresses,Daily,Active Users
-Polygon,Addresses,Daily,Active Users
-Solana,Addresses,Daily,Active Users
-Arbitrum,Transactions,Daily,Total Count
-Avalanche,Transactions,Daily,Total Count
-Ethereum,Transactions,Daily,Total Count
-Optimism,Transactions,Daily,Total Count
-Polygon,Transactions,Daily,Total Count
+Segment,Metric,Title,Y Axis
+Addresses,Active Users,Active Addresses by Blockchain,Addresses
+Transactions,Total Count,Total Transactions by Blockchain,Transactions
+Swaps,Total Count,Total Swaps by Blockchain,Swaps
