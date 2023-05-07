@@ -18,6 +18,12 @@ queries = pd.read_csv('data/queries.csv')
 charts = pd.read_csv('data/charts.csv')
 week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
+# App Description
+with st.expander('**How It Works?**'):
+    st.write("""
+        Lorem ipsum
+    """)
+
 # Filters
 c1, c2 = st.columns(2)
 with c1:
@@ -71,6 +77,14 @@ option_dates = st.slider(
     value=(datetime.strptime(str(date.today() - timedelta(90)), '%Y-%m-%d').date(), datetime.strptime(df['Date'].max(), '%Y-%m-%d').date()),
     key='option_dates'
 )
+
+# Metric Description
+
+metric_descrption = charts.query("Segment == @option_segments & Metric == @option_metrics")['Description'].iloc[0]
+# st.write("""
+#         @chart_descrption
+#     """)
+st.info(f"**Metric Description**: {metric_descrption}", icon="💡")
 
 df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df = df.query("Blockchain == @option_blockchains & Date >= @option_dates[0] & Date <= @option_dates[1]")
