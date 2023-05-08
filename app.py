@@ -1,10 +1,13 @@
-# Libraries
+# ------------------------------ Libraries ------------------------------ #
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import PIL
 from datetime import date, datetime, timedelta
+import PIL
+
+# ------------------------------ Configuration ------------------------------ #
 
 # Page Favicon
 favicon = PIL.Image.open('favicon.png')
@@ -12,13 +15,8 @@ favicon = PIL.Image.open('favicon.png')
 # Layout
 st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favicon, layout='wide')
 
-# Variables
-theme_plotly = 'streamlit'
-queries = pd.read_csv('data/queries.csv')
-charts = pd.read_csv('data/charts.csv')
-week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+# ------------------------------ Description ------------------------------ #
 
-# App Description
 with st.expander('**How Outlier Works?**'):
     st.write("""
         **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
@@ -43,36 +41,51 @@ with st.expander('**How Outlier Works?**'):
         metrics had the highest/ lowest activity.
     """)
 
-# Filters
+# ------------------------------ Filters ------------------------------ #
+
+# Variables
+queries = pd.read_csv('data/queries.csv')
+
+# Filter Segments And Metrics
 c1, c2 = st.columns(2)
 with c1:
     option_segments = st.selectbox(
-        '**Segment**',
+        label='**Segment**',
         options=queries['Segment'].unique(),
         key='option_segments'
     )
-
 with c2:
     option_metrics = st.selectbox(
-        '**Metric**',
+        label='**Metric**',
         options=queries.query("Segment == @option_segments")['Metric'].unique(),
         key='option_metrics'
     )
 
+# Filter Blockchains
 option_blockchains = st.multiselect(
-    '**Blockchains**',
+    label='**Blockchains**',
     options=queries.query("Segment == @option_segments & Metric == @option_metrics")['Blockchain'].unique(),
     default=queries.query("Segment == @option_segments & Metric == @option_metrics")['Blockchain'].unique(),
     key='option_blockchains'
 )
 
-# Data
+# Data Source
+# Load the local data file using the filters
 data_file = f"data/{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_daily.csv"
 df = pd.read_csv(data_file)
 
-if df['Date'].iloc[0] >= str(date.today() - timedelta(1)) and df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size == df['Blockchain'].unique().size:
+# Check whether the data is up to date or not, the time difference is currently 2 days
+# If the data is up to date, the local loaded file will be filtered using the selected blockchains
+if df['Date'].iloc[0] >= str(date.today() - timedelta(2)) and df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size == df['Blockchain'].unique().size:
     df = df.query("Blockchain == @option_blockchains")
 
+# If the data is not up to date, the data will be pulled online using their subsequent query ID
+# Currently, only the free data on Flipside are being used for this tool
+# The queries are broken down into multiple small SQLs that get the data for each blockchain separately
+# This helps to considerably reduce the required computational power to run each query
+# The result of each query is loaded as a JSON into a data frame
+# Then the updated rows will be added to the locally loaded data file
+# And saves it as a CSV file for the next iterations
 else:
     query_result = pd.DataFrame()
     for blockchain in option_blockchains:
@@ -85,13 +98,14 @@ else:
 
     df.to_csv(data_file, index=False)
 
+# Date Alignment
+# Removes the last date if it only contains a portion of blockchains instead of all of them
 if df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size < df['Blockchain'].unique().size:
     df.drop(df[df['Date'] == df['Date'].iloc[0]].index, inplace = True)
 
-# Time Frame
+# Filter Chart Scale And Date Range
 c1, c2 = st.columns([1, 7])
 with c1:
-    # option_scale = st.checkbox('**Log Scale**', key='option_scale')
     option_scale = st.radio('**Scale**', options=['Linear', 'Log'], key='option_scale')
 with c2:
     option_dates = st.slider(
@@ -105,17 +119,31 @@ with c2:
 # Divider
 st.divider()
 
+# ------------------------------ Visualization ------------------------------ #
+
+# Chart Information
+charts = pd.read_csv('data/charts.csv')
+
+# Chart Theme
+theme_plotly = 'streamlit'
+
+# Week days for the heatmap chart
+week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
 # Metric Description
 metric_descrption = charts.query("Segment == @option_segments & Metric == @option_metrics")['Description'].iloc[0]
 st.info(f"**Metric Description**: {metric_descrption}", icon="💡")
 
+# Apply the blockchains and date filters to the data frame
 df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df = df.query("Blockchain == @option_blockchains & Date >= @option_dates[0] & Date <= @option_dates[1]").reset_index(drop=True)
 
-# Charts
+# Checks whether the minimum number of blockchains is selected or not
+# Currently, the limit is at least 2 blockchains
 if len(option_blockchains) <= 1:
     st.warning('Please select at least 2 blockchains to see the metrics.')
 
+# Plotly Charts
 else:
     title = charts.query("Segment == @option_segments & Metric == @option_metrics")['Title'].iloc[0]
     y_axis = charts.query("Segment == @option_segments & Metric == @option_metrics")['Y Axis'].iloc[0]
@@ -163,7 +191,8 @@ else:
 # Divider
 st.divider()
 
-# Credits
+# ------------------------------ Credits ------------------------------ #
+
 c1, c2, c3 = st.columns(3)
 with c1:
     st.info('**Data Analyst: [@AliTslm](https://twitter.com/AliTslm)**', icon="💡")
