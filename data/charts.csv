@@ -1,5 +1,6 @@
-Segment,Metric,Title,Y Axis,Description
-Addresses,Active Users,Active Users by Blockchain,Addresses,The number of unique addresses that were active as a sender of a successful transactions.
-Blocks,Total Count,Blocks by Blockchain,Blocks,The total number of blocks created.
-Fees,Total Fees,Total Transaction Fees by Blockchain [USD],Fees [USD],The total amount of fees in U.S. dollars paid to conduct transactions.
-Transactions,Total Count,Transactions by Blockchain,Transactions,The total number of transactions whether it has been successful or not.
+Segment,Metric,Aggregation,Title,Y Axis,Unit,Decimals,Description
+Addresses,Active Users,Blockchain,Total Number of Active Users,Addresses,,0,The number of unique addresses that were active as a sender of a successful transactions.
+Blocks,Total Count,Blockchain,Total Number of Blocks,Blocks,,0,The total number of blocks created.
+Fees,Median Fees,Blockchain,Median Fees per Transaction,Fees [USD],$,4,The median amount of fees per transaction in U.S. dollars.
+Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
+Transactions,Total Count,Blockchain,Total Number of Transactions,Transactions,,0,The total number of transactions whether it has been successful or not.
