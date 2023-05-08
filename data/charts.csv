@@ -1,4 +1,5 @@
 Segment,Metric,Title,Y Axis,Description
 Addresses,Active Users,Active Users by Blockchain,Addresses,The number of unique addresses that were active as a sender of a successful transactions.
-Transactions,Total Count,Transactions by Blockchain,Transactions,The total number of transactions whether it has been successful or not.
 Blocks,Total Count,Blocks by Blockchain,Blocks,The total number of blocks created.
+Fees,Total Fees,Total Transaction Fees by Blockchain [USD],Fees [USD],The total amount of fees in U.S. dollars paid to conduct transactions.
+Transactions,Total Count,Transactions by Blockchain,Transactions,The total number of transactions whether it has been successful or not.

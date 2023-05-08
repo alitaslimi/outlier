@@ -24,6 +24,13 @@ Blocks,Total Count,Optimism,Blockchain,799ca198-d8d4-46d7-af26-6ab248ad0be7
 Blocks,Total Count,Osmosis,Blockchain,42b9dea5-8bd3-4dd4-a01a-5a5f386af931
 Blocks,Total Count,Polygon,Blockchain,b83d200f-da7a-4707-96bd-a6d2a35f6039
 Blocks,Total Count,Solana,Blockchain,d21b4771-c893-4852-8a2d-21c5ccc4f163
+Fees,Total Fees,Arbitrum,Blockchain,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
+Fees,Total Fees,Avalanche,Blockchain,8a19e1d3-479a-425c-9553-bf6f5da35613
+Fees,Total Fees,BSC,Blockchain,8a03f11f-ac64-4b58-9fa4-b9679abfbb87
+Fees,Total Fees,Ethereum,Blockchain,6a38f86f-971f-4811-a0a1-c401e0597ed8
+Fees,Total Fees,Gnosis,Blockchain,0fb6d747-ca2d-466c-83f8-4de0b0aa3a7f
+Fees,Total Fees,Optimism,Blockchain,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
+Fees,Total Fees,Polygon,Blockchain,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
 Transactions,Total Count,Arbitrum,Blockchain,7548f19b-d7cb-4fb2-8ed1-75ffefebae15
 Transactions,Total Count,Avalanche,Blockchain,278d4896-0e1a-4697-9551-f12529567920
 Transactions,Total Count,Axelar,Blockchain,9ebbfd40-82f3-432f-a321-a20f721eb422
