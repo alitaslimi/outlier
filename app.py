@@ -146,11 +146,13 @@ if len(option_blockchains) <= 1:
 # Plotly Charts
 else:
     title = charts.query("Segment == @option_segments & Metric == @option_metrics")['Title'].iloc[0]
-    y_axis = charts.query("Segment == @option_segments & Metric == @option_metrics")['Y Axis'].iloc[0]
+    yaxis = charts.query("Segment == @option_segments & Metric == @option_metrics")['Y Axis'].iloc[0]
+    unit = charts.query("Segment == @option_segments & Metric == @option_metrics")['Unit'].fillna('').iloc[0]
+    decimals = charts.query("Segment == @option_segments & Metric == @option_metrics")['Decimals'].iloc[0]
 
     fig = px.line(df, x='Date', y='Values', color='Blockchain', custom_data=['Blockchain'], title=f"Daily {title}", log_y=(option_scale == 'Log'))
-    fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=y_axis, hovermode='x unified')
-    fig.update_traces(hovertemplate='%{customdata}: %{y:,.0f}<extra></extra>')
+    fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, hovermode='x unified')
+    fig.update_traces(hovertemplate=f"%{{customdata}}: {unit}%{{y:,.{decimals}f}}<extra></extra>")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     fig = go.Figure()
