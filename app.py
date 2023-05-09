@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, datetime, timedelta
 import PIL
+import random
 
 # ------------------------------ Configuration ------------------------------ #
 
@@ -47,7 +48,7 @@ with st.expander('**How Outlier Works?**'):
 queries = pd.read_csv('data/queries.csv')
 
 # Filter Segments And Metrics
-c1, c2 = st.columns(2)
+c1, c2, c3 = st.columns(3)
 with c1:
     option_segments = st.selectbox(
         label='**Segment**',
@@ -60,18 +61,24 @@ with c2:
         options=queries.query("Segment == @option_segments")['Metric'].unique(),
         key='option_metrics'
     )
+with c3:
+    option_aggregation = st.selectbox(
+        label='**Aggregation**',
+        options=queries.query("Segment == @option_segments & Metric == @option_metrics")['Aggregation'].unique(),
+        key='option_aggregation'
+    )
 
 # Filter Blockchains
 option_blockchains = st.multiselect(
     label='**Blockchains**',
-    options=queries.query("Segment == @option_segments & Metric == @option_metrics")['Blockchain'].unique(),
-    default=queries.query("Segment == @option_segments & Metric == @option_metrics")['Blockchain'].unique(),
+    options=queries.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Blockchain'].unique(),
+    default=queries.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Blockchain'].unique(),
     key='option_blockchains'
 )
 
 # Data Source
 # Load the local data file using the filters
-data_file = f"data/{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_daily.csv"
+data_file = f"data/{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation.lower()}_daily.csv"
 df = pd.read_csv(data_file)
 
 # Check whether the data is up to date or not, the time difference is currently 2 days
@@ -90,7 +97,7 @@ else:
     query_result = pd.DataFrame()
     for blockchain in option_blockchains:
         if df[df['Blockchain'] == blockchain]['Date'].iloc[0] < str(date.today() - timedelta(2)):
-            query_id = queries.query("Segment == @option_segments & Metric == @option_metrics & Blockchain == @blockchain")['Query'].iloc[0]
+            query_id = queries.query("Segment == @option_segments & Metric == @option_metrics & Blockchain == @blockchain & Aggregation == @option_aggregation")['Query'].iloc[0]
             query_result = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{query_id}/data/latest")
             query_result['Blockchain'] = blockchain
             query_result['Date'] = query_result['Date'].dt.strftime('%Y-%m-%d')
@@ -102,6 +109,17 @@ else:
 # Removes the last date if it only contains a portion of blockchains instead of all of them
 if df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size < df['Blockchain'].unique().size:
     df.drop(df[df['Date'] == df['Date'].iloc[0]].index, inplace = True)
+
+# Filter Aggregation
+if option_aggregation != 'Blockchain':
+    option_aggregates = st.multiselect(
+        label=f"**{option_aggregation}s**",
+        options=df[option_aggregation].unique(),
+        default=df[option_aggregation].head(5).unique(),
+        max_selections=20,
+        help="It is advised to select less than 10 options to prevent clustration. Max selection is 20.",
+        key='option_aggregates'
+    )
 
 # Filter Chart Scale And Date Range
 c1, c2 = st.columns([1, 7])
@@ -131,36 +149,40 @@ theme_plotly = 'streamlit'
 week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Metric Description
-metric_descrption = charts.query("Segment == @option_segments & Metric == @option_metrics")['Description'].iloc[0]
+metric_descrption = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Description'].iloc[0]
 st.info(f"**Metric Description**: {metric_descrption}", icon="💡")
 
 # Apply the blockchains and date filters to the data frame
 df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df = df.query("Blockchain == @option_blockchains & Date >= @option_dates[0] & Date <= @option_dates[1]").reset_index(drop=True)
 
+# Apply the aggregates filter to the data frame
+if option_aggregation != 'Blockchain':
+    df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg('sum').reset_index()
+
 # Checks whether the minimum number of blockchains is selected or not
 # Currently, the limit is at least 2 blockchains
-if len(option_blockchains) <= 1:
+if len(option_blockchains) < 2:
     st.warning('Please select at least 2 blockchains to see the metrics.')
 
 # Plotly Charts
 else:
-    title = charts.query("Segment == @option_segments & Metric == @option_metrics")['Title'].iloc[0]
-    yaxis = charts.query("Segment == @option_segments & Metric == @option_metrics")['Y Axis'].iloc[0]
-    unit = charts.query("Segment == @option_segments & Metric == @option_metrics")['Unit'].fillna('').iloc[0]
-    decimals = charts.query("Segment == @option_segments & Metric == @option_metrics")['Decimals'].iloc[0]
+    title = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Title'].iloc[0]
+    yaxis = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Y Axis'].iloc[0]
+    unit = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Unit'].fillna('').iloc[0]
+    decimals = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Decimals'].iloc[0]
 
-    fig = px.line(df, x='Date', y='Values', color='Blockchain', custom_data=['Blockchain'], title=f"Daily {title}", log_y=(option_scale == 'Log'))
+    fig = px.line(df, x='Date', y='Values', color=option_aggregation, custom_data=[option_aggregation], title=f"Daily {title}", log_y=(option_scale == 'Log'))
     fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, hovermode='x unified')
     fig.update_traces(hovertemplate=f"%{{customdata}}: {unit}%{{y:,.{decimals}f}}<extra></extra>")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     fig = go.Figure()
-    for i in option_blockchains:
+    for i in option_blockchains if option_aggregation == 'Blockchain' else option_aggregates:
         fig.add_trace(go.Scatter(
             name=i,
-            x=df.query("Blockchain == @i")['Date'],
-            y=df.query("Blockchain == @i")['Values'],
+            x=df.query(f"{option_aggregation} == @i")['Date'],
+            y=df.query(f"{option_aggregation} == @i")['Values'],
             mode='lines',
             stackgroup='one',
             groupnorm='percent'
@@ -180,13 +202,13 @@ else:
         column_values = f"{option_segments} {option_metrics}"
         df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
         df = df.rename(columns={'Values': column_values})
-        df = df[['Date', 'Blockchain', column_values]]
+        df = df[['Date', option_aggregation, column_values]]
         df.index += 1
         st.dataframe(df, use_container_width=True)
         st.download_button(
             label="Download CSV",
             data=df.to_csv().encode('utf-8'),
-            file_name=f"outlier_{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}.csv",
+            file_name=f"outlier_{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation}.csv",
             mime='text/csv',
         )
 
