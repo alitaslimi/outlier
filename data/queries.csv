@@ -51,3 +51,15 @@ Transactions,Total Count,Optimism,Blockchain,2d27ae0a-2dcf-430d-9e6f-03e49d2357a
 Transactions,Total Count,Osmosis,Blockchain,c96898d0-677b-4ae4-820c-a45ee86f1199
 Transactions,Total Count,Polygon,Blockchain,171c5bf3-a695-4b95-9fcf-ced70ba18be3
 Transactions,Total Count,Solana,Blockchain,936a3f9a-caa4-4609-9c14-7dbfd04e4a03
+Swaps,Swaps Volume,Ethereum,Blockchain,ca269175-7673-498c-8dcd-d3d9d49ad676
+Swaps,Swaps Volume,Avalanche,Blockchain,e6dd88cf-b149-4da1-8fc0-5964b287be8d
+Swaps,Swaps Volume,Polygon,Blockchain,50435741-d998-4254-854b-efc741b4da17
+Swaps,Swaps Volume,Optimism,Blockchain,3c21498b-39e4-4577-a5dc-ba82e0be9feb
+NFTs,Sales Volume,Ethereum,Blockchain,da48cfc3-9d11-418b-a271-26ca6b9684cc
+NFTs,Sales Volume,Polygon,Blockchain,ca0db4cb-a906-4cea-8650-cc13a176041d
+NFTs,Sales Volume,Optimism,Blockchain,8cf05e60-87c2-4a0a-8545-58d5d6f57af0
+NFTs,Sales Volume,Flow,Blockchain,6c42bcfd-76fa-41ec-8d2b-890c3ba51ab7
+NFTs,Sales Volume,Solana,Blockchain,14d19c6b-e742-4ed3-89c8-1a879a52e128
+NFTs,Sales Volume,Ethereum,Marketplace,71dbced0-1c7c-4e34-8661-a405f2dfd9e8
+NFTs,Sales Volume,Polygon,Marketplace,5d0f0b40-026b-4568-b5d0-f2d228f959ec
+NFTs,Sales Volume,Optimism,Marketplace,5d0c2d40-d4d5-4ed8-b680-c5d01224255e
