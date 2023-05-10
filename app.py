@@ -6,10 +6,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, datetime, timedelta
 import PIL
-import pathlib
-from bs4 import BeautifulSoup
-import logging
-import shutil
+# import pathlib
+# from bs4 import BeautifulSoup
+# import logging
+# import shutil
 
 # ------------------------------ Configuration ------------------------------ #
 
