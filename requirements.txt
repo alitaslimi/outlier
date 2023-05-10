@@ -5,3 +5,4 @@ Path
 plotly
 ShroomDK
 timedelta
+bs4
