@@ -6,10 +6,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, datetime, timedelta
 import PIL
-import pathlib
-from bs4 import BeautifulSoup
-import logging
-import shutil
 
 # ------------------------------ Configuration ------------------------------ #
 
@@ -18,66 +14,6 @@ favicon = PIL.Image.open('favicon.png')
 
 # Layout
 st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favicon, layout='wide')
-
-# ------------------------------ Google Analytics ------------------------------ #
-
-# Method 1
-# google_analytics_js = """
-#     <!-- Google tag (gtag.js) -->
-#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
-#     <script>
-#         window.dataLayer = window.dataLayer || [];
-#         function gtag(){dataLayer.push(arguments);}
-#         gtag('js', new Date());
-
-#         gtag('config', 'G-VN66FD7ST2');
-#     </script>
-# """
-# st.components.v1.iframe('https://outlier.streamlit.app', height=1, scrolling=False)
-
-# Method 2
-def inject_ga():
-    GA_ID = "google_analytics"
-    GA_JS = """
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-VN66FD7ST2');
-        </script>
-    """
-
-    # Insert the script in the head tag of the static template inside your virtual
-    index_path = pathlib.Path(st.__file__).parent / "static" / "index.html"
-    logging.info(f'editing {index_path}')
-    soup = BeautifulSoup(index_path.read_text(), features="html.parser")
-    if not soup.find(id=GA_ID): 
-        bck_index = index_path.with_suffix('.bck')
-        if bck_index.exists():
-            shutil.copy(bck_index, index_path)  
-        else:
-            shutil.copy(index_path, bck_index)  
-        html = str(soup)
-        new_html = html.replace('<head>', '<head>\n' + GA_JS)
-        index_path.write_text(new_html)
-
-inject_ga()
-
-# Method 3
-# st.markdown("""
-#     <!-- Google tag (gtag.js) -->
-#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
-#     <script>
-#         window.dataLayer = window.dataLayer || [];
-#         function gtag(){dataLayer.push(arguments);}
-#         gtag('js', new Date());
-
-#         gtag('config', 'G-VN66FD7ST2');
-#     </script>
-# """, unsafe_allow_html=True)
 
 # ------------------------------ Description ------------------------------ #
 
@@ -251,14 +187,6 @@ else:
             groupnorm='percent'
         ))
     fig.update_layout(title=f'Daily Share of {title}')
-    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-    df_heatmap = df.copy()
-    df_heatmap['Normalized'] = df.groupby('Blockchain')['Values'].transform(lambda x: (x - x.min()) / (x.max() - x.min()))
-    fig = px.density_heatmap(df_heatmap, x='Blockchain', y=df_heatmap.Date.dt.strftime('%A'), z='Normalized', histfunc='avg', title=f"Daily Heatmap of Normalized {title}")
-    fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, coloraxis_colorbar=dict(title='Normalized'))
-    fig.update_xaxes(categoryorder='category ascending')
-    fig.update_yaxes(categoryorder='array', categoryarray=week_days)
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     with st.expander('**View and Download Data**'):
