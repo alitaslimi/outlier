@@ -22,18 +22,18 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favico
 # ------------------------------ Google Analytics ------------------------------ #
 
 # Method 1
-# google_analytics_js = """
-#     <!-- Google tag (gtag.js) -->
-#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
-#     <script>
-#         window.dataLayer = window.dataLayer || [];
-#         function gtag(){dataLayer.push(arguments);}
-#         gtag('js', new Date());
+google_analytics_js = """
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-#         gtag('config', 'G-VN66FD7ST2');
-#     </script>
-# """
-# st.components.v1.iframe('https://outlier.streamlit.app', height=1, scrolling=False)
+        gtag('config', 'G-VN66FD7ST2');
+    </script>
+"""
+st.components.v1.iframe('https://outlier.streamlit.app', height=1, scrolling=False)
 
 # Method 2
 # def inject_ga():
@@ -67,17 +67,17 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favico
 # inject_ga()
 
 # Method 3
-st.markdown("""
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+# st.markdown("""
+#     <!-- Google tag (gtag.js) -->
+#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN66FD7ST2"></script>
+#     <script>
+#         window.dataLayer = window.dataLayer || [];
+#         function gtag(){dataLayer.push(arguments);}
+#         gtag('js', new Date());
 
-        gtag('config', 'G-VN66FD7ST2');
-    </script>
-""", unsafe_allow_html=True)
+#         gtag('config', 'G-VN66FD7ST2');
+#     </script>
+# """, unsafe_allow_html=True)
 
 # ------------------------------ Description ------------------------------ #
 
