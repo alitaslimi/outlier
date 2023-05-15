@@ -1,7 +1,4 @@
 streamlit
 datetime
 pandas
-Path
 plotly
-ShroomDK
-timedelta
