@@ -13,29 +13,29 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':spar
 
 # ------------------------------ Description ------------------------------ #
 
-with st.expander('**How does Outlier work?**'):
-    st.write("""
-        **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
-        their desired metrics and compare the state of the available blockchains since **2022**.
+# with st.expander('**How does Outlier work?**'):
+#     st.write("""
+#         **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
+#         their desired metrics and compare the state of the available blockchains since **2022**.
         
-        The app consists of two main sections: the filtering section on top and the data visualization
-        follows after.
+#         The app consists of two main sections: the filtering section on top and the data visualization
+#         follows after.
 
-        In the top part, there are multiple dropdowns and select boxes that users can interact
-        with the determine their desired metric. The **Segment** dropdown determines the sector
-        within the crypto industry, for example, the addresses or transactions. The **Metric**
-        dropdown determines a specific area within the selected segment. The **Blockchains**
-        select box provides a list of all the available blockchains for the selected metric.
-        After that, users are able to select the scale of the following charts and also, determine
-        the date range they would like to see the data for.
+#         In the top part, there are multiple dropdowns and select boxes that users can interact
+#         with the determine their desired metric. The **Segment** dropdown determines the sector
+#         within the crypto industry, for example, the addresses or transactions. The **Metric**
+#         dropdown determines a specific area within the selected segment. The **Blockchains**
+#         select box provides a list of all the available blockchains for the selected metric.
+#         After that, users are able to select the scale of the following charts and also, determine
+#         the date range they would like to see the data for.
 
-        The visualization part includes three different charts. The first one is a line chart
-        showing the values of the selected metric for the selected blockchains on a daily basis.
-        The second chart is a normalized area chart that depicts the daily share of the selected
-        metric for different blockchains. Lastly, the third chart shows a normalized heatmap of
-        the selected metric over different days of a week that demonstrates when the selected
-        metrics had the highest/ lowest activity.
-    """)
+#         The visualization part includes three different charts. The first one is a line chart
+#         showing the values of the selected metric for the selected blockchains on a daily basis.
+#         The second chart is a normalized area chart that depicts the daily share of the selected
+#         metric for different blockchains. Lastly, the third chart shows a normalized heatmap of
+#         the selected metric over different days of a week that demonstrates when the selected
+#         metrics had the highest/ lowest activity.
+#     """)
 
 # ------------------------------ Filters ------------------------------ #
 
