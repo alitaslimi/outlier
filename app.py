@@ -5,15 +5,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, datetime, timedelta
-import PIL
 
 # ------------------------------ Configuration ------------------------------ #
 
-# Page Favicon
-favicon = PIL.Image.open('favicon.png')
-
 # Layout
-st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favicon, layout='wide')
+st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':sparkles:', layout='wide')
 
 # ------------------------------ Description ------------------------------ #
 
@@ -109,8 +105,6 @@ else:
 if df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size < df['Blockchain'].unique().size:
     df.drop(df[df['Date'] == df['Date'].iloc[0]].index, inplace = True)
 
-df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
-
 # Filter Aggregation
 if option_aggregation != 'Blockchain':
     option_aggregates = st.multiselect(
@@ -168,29 +162,36 @@ if len(option_blockchains) < 2:
 
 # Plotly Charts
 else:
+    # Get the chart details from the charts.csv file
     title = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Title'].iloc[0]
     yaxis = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Y Axis'].iloc[0]
     unit = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Unit'].fillna('').iloc[0]
     decimals = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Decimals'].iloc[0]
 
+    # Plot the data using a Plotly line chart
+    df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
     fig = px.line(df, x='Date', y='Values', color=option_aggregation, custom_data=[option_aggregation], title=f"Daily {title}", log_y=(option_scale == 'Log'))
     fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, hovermode='x unified')
     fig.update_traces(hovertemplate=f"%{{customdata}}: {unit}%{{y:,.{decimals}f}}<extra></extra>")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
+    # Plot the normalized data using a Plotly area chart
     fig = go.Figure()
-    for i in option_blockchains if option_aggregation == 'Blockchain' else option_aggregates:
+    for i in df['Blockchain'].unique() if option_aggregation == 'Blockchain' else df[option_aggregation].unique():
         fig.add_trace(go.Scatter(
             name=i,
             x=df.query(f"{option_aggregation} == @i")['Date'],
             y=df.query(f"{option_aggregation} == @i")['Values'],
+            customdata=df.query(f"{option_aggregation} == @i")[option_aggregation],
             mode='lines',
             stackgroup='one',
-            groupnorm='percent'
+            groupnorm='percent',
+            hovertemplate="%{customdata}: %{y:,.1f}%<extra></extra>"
         ))
-    fig.update_layout(title=f'Daily Share of {title}')
+    fig.update_layout(title=f'Daily Share of {title}', hovermode='x unified')
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
+    # View and download the data in a CSV format
     with st.expander('**View and Download Data**'):
         column_values = f"{option_segments} {option_metrics}"
         df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
