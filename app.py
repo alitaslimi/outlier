@@ -17,7 +17,7 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favico
 
 # ------------------------------ Description ------------------------------ #
 
-with st.expander('**How Does Outlier Work?**'):
+with st.expander('**How does Outlier work?**'):
     st.write("""
         **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
         their desired metrics and compare the state of the available blockchains since **2022**.
