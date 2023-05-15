@@ -24,13 +24,12 @@ Blocks,Total Count,Optimism,Blockchain,799ca198-d8d4-46d7-af26-6ab248ad0be7
 Blocks,Total Count,Osmosis,Blockchain,42b9dea5-8bd3-4dd4-a01a-5a5f386af931
 Blocks,Total Count,Polygon,Blockchain,b83d200f-da7a-4707-96bd-a6d2a35f6039
 Blocks,Total Count,Solana,Blockchain,d21b4771-c893-4852-8a2d-21c5ccc4f163
-Fees,Total Fees,Arbitrum,Blockchain,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
-Fees,Total Fees,Avalanche,Blockchain,8a19e1d3-479a-425c-9553-bf6f5da35613
-Fees,Total Fees,BSC,Blockchain,8a03f11f-ac64-4b58-9fa4-b9679abfbb87
-Fees,Total Fees,Ethereum,Blockchain,6a38f86f-971f-4811-a0a1-c401e0597ed8
-Fees,Total Fees,Gnosis,Blockchain,0fb6d747-ca2d-466c-83f8-4de0b0aa3a7f
-Fees,Total Fees,Optimism,Blockchain,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
-Fees,Total Fees,Polygon,Blockchain,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
+Fees,Average Fees,Arbitrum,Blockchain,1d4bdcb3-1256-4bb2-87ce-ee0c5cc60761
+Fees,Average Fees,Avalanche,Blockchain,a546299f-e714-42f5-9e27-ca9f4dbdd8db
+Fees,Average Fees,BSC,Blockchain,a4d7d4e2-a221-4b06-955d-386f08c3f99e
+Fees,Average Fees,Ethereum,Blockchain,5310f3ee-e6c7-4dc5-b370-a63b14eb7b48
+Fees,Average Fees,Optimism,Blockchain,dfc2e40c-5a73-4979-b2fa-755f8f0389e4
+Fees,Average Fees,Polygon,Blockchain,a7eaadd1-ea92-458e-90c3-68946ad5924a
 Fees,Median Fees,Arbitrum,Blockchain,00c77329-a486-43af-8a2b-22b29775fd72
 Fees,Median Fees,Avalanche,Blockchain,7f7a47a8-3a41-429f-a819-a623c3707c7e
 Fees,Median Fees,BSC,Blockchain,ca8165cd-eaab-48ec-a225-fda194006b48
@@ -38,6 +37,55 @@ Fees,Median Fees,Ethereum,Blockchain,848403da-3562-4845-9a49-4ed975a7ac5c
 Fees,Median Fees,Gnosis,Blockchain,f552c268-2e02-4bb3-b049-bc6f6f54058d
 Fees,Median Fees,Optimism,Blockchain,2c348c5e-6cb8-4554-a6ca-26191b5b122a
 Fees,Median Fees,Polygon,Blockchain,5fd32117-7bb2-497d-bc57-cbf604cc2779
+Fees,Total Fees,Arbitrum,Blockchain,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
+Fees,Total Fees,Avalanche,Blockchain,8a19e1d3-479a-425c-9553-bf6f5da35613
+Fees,Total Fees,BSC,Blockchain,8a03f11f-ac64-4b58-9fa4-b9679abfbb87
+Fees,Total Fees,Ethereum,Blockchain,6a38f86f-971f-4811-a0a1-c401e0597ed8
+Fees,Total Fees,Gnosis,Blockchain,0fb6d747-ca2d-466c-83f8-4de0b0aa3a7f
+Fees,Total Fees,Optimism,Blockchain,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
+Fees,Total Fees,Polygon,Blockchain,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
+NFTs,Sales Volume,Ethereum,Blockchain,da48cfc3-9d11-418b-a271-26ca6b9684cc
+NFTs,Sales Volume,Flow,Blockchain,6c42bcfd-76fa-41ec-8d2b-890c3ba51ab7
+NFTs,Sales Volume,Optimism,Blockchain,8cf05e60-87c2-4a0a-8545-58d5d6f57af0
+NFTs,Sales Volume,Polygon,Blockchain,ca0db4cb-a906-4cea-8650-cc13a176041d
+NFTs,Sales Volume,Solana,Blockchain,14d19c6b-e742-4ed3-89c8-1a879a52e128
+NFTs,Sales Volume,Ethereum,Marketplace,71dbced0-1c7c-4e34-8661-a405f2dfd9e8
+NFTs,Sales Volume,Optimism,Marketplace,5d0c2d40-d4d5-4ed8-b680-c5d01224255e
+NFTs,Sales Volume,Polygon,Marketplace,5d0f0b40-026b-4568-b5d0-f2d228f959ec
+NFTs,Sales Volume,Solana,Marketplace,42e7df94-bb3a-447a-9909-a29134f447e4
+Swaps,Swappers,Avalanche,Blockchain,cc38455e-00a4-4a57-8806-03029e27ab9e
+Swaps,Swappers,Ethereum,Blockchain,0cb35868-7c2d-46ba-8eb3-064d1f189f1b
+Swaps,Swappers,Optimism,Blockchain,e4dd6977-4bd1-446f-a8ea-125eba34fc66
+Swaps,Swappers,Polygon,Blockchain,55c52afa-6247-4789-85e4-6dfe713cdae1
+Swaps,Swappers,Solana,Blockchain,9e3ab1b1-7de4-41c4-88cb-340cac90f849
+Swaps,Swappers,Avalanche,DEX,ffb7b494-6d90-40bd-9fbb-7f1dee82d64a
+Swaps,Swappers,Ethereum,DEX,38a750f3-3c68-4254-a702-ee3a39221db1
+Swaps,Swappers,Optimism,DEX,f7052188-60f6-4554-9f6f-f224ed896015
+Swaps,Swappers,Polygon,DEX,7e781002-9519-4368-85f6-d90e55e51876
+Swaps,Swaps Volume,Avalanche,Blockchain,e6dd88cf-b149-4da1-8fc0-5964b287be8d
+Swaps,Swaps Volume,Ethereum,Blockchain,ca269175-7673-498c-8dcd-d3d9d49ad676
+Swaps,Swaps Volume,Optimism,Blockchain,3c21498b-39e4-4577-a5dc-ba82e0be9feb
+Swaps,Swaps Volume,Polygon,Blockchain,50435741-d998-4254-854b-efc741b4da17
+Swaps,Swaps Volume,Avalanche,DEX,0806540f-b6d0-475a-bfb1-664b03696954
+Swaps,Swaps Volume,Ethereum,DEX,fd7ad404-b134-4838-b99a-29605c30fba3
+Swaps,Swaps Volume,Optimism,DEX,56817fef-88d7-457a-8ace-3c17ee2655b2
+Swaps,Swaps Volume,Polygon,DEX,97087c8d-e874-4b57-af72-19cba65b9850
+Swaps,Total Count,Avalanche,Blockchain,4e06bc87-afb3-4223-8ced-f0a25aa2bf6f
+Swaps,Total Count,Ethereum,Blockchain,284632e5-bca5-4a15-9707-bdb6609bb7bb
+Swaps,Total Count,Optimism,Blockchain,184b95ce-d3f3-4e36-a0fb-0179f3a8465b
+Swaps,Total Count,Polygon,Blockchain,44665774-aced-4f55-99bb-4315910c57d3
+Swaps,Total Count,Solana,Blockchain,0977fb66-ede4-4f0b-a5d5-28f1ec43f81e
+Swaps,Total Count,Avalanche,DEX,1f99b83f-e0d0-411f-bc90-cd483b8cfef2
+Swaps,Total Count,Ethereum,DEX,dd35b75f-ea72-4da4-82c8-2680a34aca81
+Swaps,Total Count,Optimism,DEX,60ea0db3-1d11-447e-b3d4-88dbf001f3e0
+Swaps,Total Count,Polygon,DEX,1fe76bca-112b-4a6b-b115-25861bc210f4
+Transactions,Success Rate,Arbitrum,Blockchain,6f851fa5-6d39-4a55-8438-541433b0b4ad
+Transactions,Success Rate,Avalanche,Blockchain,fdba0b44-0ccf-47a1-8b86-fcb0d881f60d
+Transactions,Success Rate,BSC,Blockchain,3afcb160-3152-4768-96fb-48df0679e6f9
+Transactions,Success Rate,Ethereum,Blockchain,b9f35ffb-9b8f-4489-8fff-32f4ad13f949
+Transactions,Success Rate,Gnosis,Blockchain,4ed35fca-5657-48ec-ae90-92ba34cb3290
+Transactions,Success Rate,Optimism,Blockchain,60aadb07-6339-408d-88f8-ec07d92cc1f6
+Transactions,Success Rate,Polygon,Blockchain,9e9e59f4-04fa-4931-b132-b1c138c6ba89
 Transactions,Total Count,Arbitrum,Blockchain,7548f19b-d7cb-4fb2-8ed1-75ffefebae15
 Transactions,Total Count,Avalanche,Blockchain,278d4896-0e1a-4697-9551-f12529567920
 Transactions,Total Count,Axelar,Blockchain,9ebbfd40-82f3-432f-a321-a20f721eb422
@@ -51,16 +99,11 @@ Transactions,Total Count,Optimism,Blockchain,2d27ae0a-2dcf-430d-9e6f-03e49d2357a
 Transactions,Total Count,Osmosis,Blockchain,c96898d0-677b-4ae4-820c-a45ee86f1199
 Transactions,Total Count,Polygon,Blockchain,171c5bf3-a695-4b95-9fcf-ced70ba18be3
 Transactions,Total Count,Solana,Blockchain,936a3f9a-caa4-4609-9c14-7dbfd04e4a03
-Swaps,Swaps Volume,Ethereum,Blockchain,ca269175-7673-498c-8dcd-d3d9d49ad676
-Swaps,Swaps Volume,Avalanche,Blockchain,e6dd88cf-b149-4da1-8fc0-5964b287be8d
-Swaps,Swaps Volume,Polygon,Blockchain,50435741-d998-4254-854b-efc741b4da17
-Swaps,Swaps Volume,Optimism,Blockchain,3c21498b-39e4-4577-a5dc-ba82e0be9feb
-NFTs,Sales Volume,Ethereum,Blockchain,da48cfc3-9d11-418b-a271-26ca6b9684cc
-NFTs,Sales Volume,Polygon,Blockchain,ca0db4cb-a906-4cea-8650-cc13a176041d
-NFTs,Sales Volume,Optimism,Blockchain,8cf05e60-87c2-4a0a-8545-58d5d6f57af0
-NFTs,Sales Volume,Flow,Blockchain,6c42bcfd-76fa-41ec-8d2b-890c3ba51ab7
-NFTs,Sales Volume,Solana,Blockchain,14d19c6b-e742-4ed3-89c8-1a879a52e128
-NFTs,Sales Volume,Ethereum,Marketplace,71dbced0-1c7c-4e34-8661-a405f2dfd9e8
-NFTs,Sales Volume,Polygon,Marketplace,5d0f0b40-026b-4568-b5d0-f2d228f959ec
-NFTs,Sales Volume,Optimism,Marketplace,5d0c2d40-d4d5-4ed8-b680-c5d01224255e
-NFTs,Sales Volume,Solana,Marketplace,42e7df94-bb3a-447a-9909-a29134f447e4
+Transactions,TPS,Arbitrum,Blockchain,2b057eb1-ad19-47f0-953f-529013c3acf9
+Transactions,TPS,Avalanche,Blockchain,1d9bd109-155b-4b93-b0a6-e349e0e55546
+Transactions,TPS,BSC,Blockchain,54b45e80-a01f-43ff-bbf0-dc1b78243fc4
+Transactions,TPS,Ethereum,Blockchain,daf82f1b-0323-44aa-906e-9df1d494e380
+Transactions,TPS,Gnosis,Blockchain,90105463-4283-49de-806e-703d604a01d1
+Transactions,TPS,Optimism,Blockchain,790c1a65-62a1-4ecc-817a-a68b9b2e22c0
+Transactions,TPS,Polygon,Blockchain,8f7da9c8-b854-46fa-b2b1-b8d83eb1f961
+Transactions,TPS,Solana,Blockchain,f584e505-6134-48fb-86b4-2c7bb0b85be6
