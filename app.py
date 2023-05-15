@@ -17,7 +17,7 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=favico
 
 # ------------------------------ Description ------------------------------ #
 
-with st.expander('**How Outlier Works?**'):
+with st.expander('**How Does Outlier Work?**'):
     st.write("""
         **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
         their desired metrics and compare the state of the available blockchains since **2022**.
@@ -109,6 +109,8 @@ else:
 if df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size < df['Blockchain'].unique().size:
     df.drop(df[df['Date'] == df['Date'].iloc[0]].index, inplace = True)
 
+df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
+
 # Filter Aggregation
 if option_aggregation != 'Blockchain':
     option_aggregates = st.multiselect(
@@ -116,7 +118,7 @@ if option_aggregation != 'Blockchain':
         options=df[option_aggregation].unique(),
         default=df[option_aggregation].head(5).unique(),
         max_selections=20,
-        help="It is advised to select less than 10 options to prevent clustration. Max selection is 20.",
+        help="It is advised to select as few items as possible to prevent the charts from being clustered. Max selection is 20.",
         key='option_aggregates'
     )
 
@@ -192,6 +194,7 @@ else:
     with st.expander('**View and Download Data**'):
         column_values = f"{option_segments} {option_metrics}"
         df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
+        df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
         df = df.rename(columns={'Values': column_values})
         df = df[['Date', option_aggregation, column_values]]
         df.index += 1
@@ -199,7 +202,7 @@ else:
         st.download_button(
             label="Download CSV",
             data=df.to_csv().encode('utf-8'),
-            file_name=f"outlier_{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation}.csv",
+            file_name=f"outlier_{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation}_daily.csv",
             mime='text/csv',
         )
 
