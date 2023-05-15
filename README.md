@@ -1,6 +1,6 @@
 # Outlier
 
-The **[Outlier](https://outlier.streamlit.app)** is a data analytics tool that allows its users to conduct a cross-chain comparison of multiple blockchains on a wide variety of metrics. It is developed on top of **[Streamlit](https://streamlit.io)** by leveraging the free data of **[Flipside Crypto](https://flipsidecrypto.xyz)**.
+The **[Outlier](https://outlier.streamlit.app)** is a blockchain analytics tool that allows its users to perform a cross-chain comparison between various blockchains on a wide variety of metrics. It is developed on top of **[Streamlit](https://streamlit.io)** by leveraging the free data of **[Flipside Crypto](https://flipsidecrypto.xyz)**.
 
 ## Structure
 
