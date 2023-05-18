@@ -13,7 +13,7 @@ All of the data used for this tool are selected from the available free data on 
 # Upcoming Features
 Here is the list of upcoming features that will be added to the app. The list items are formatted with the following pattern: **Segment, Metric, Aggregation, Blockchain**.
 - Queries
- - Addresses, Active Users, Blockchain, Flow
+  - Addresses, Active Users, Blockchain, Flow
 - Charts
  - Blocks, Block Time, Blockchain
  - Fees, Total Gas Used, Blockchain
