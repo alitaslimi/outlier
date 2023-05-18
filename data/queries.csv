@@ -107,3 +107,9 @@ Transactions,TPS,Gnosis,Blockchain,90105463-4283-49de-806e-703d604a01d1
 Transactions,TPS,Optimism,Blockchain,790c1a65-62a1-4ecc-817a-a68b9b2e22c0
 Transactions,TPS,Polygon,Blockchain,8f7da9c8-b854-46fa-b2b1-b8d83eb1f961
 Transactions,TPS,Solana,Blockchain,f584e505-6134-48fb-86b4-2c7bb0b85be6
+NFTs,Sales Count,Ethereum,Blockchain,4a7fe959-f2d0-42d8-a6cf-db51dc5533e5
+NFTs,Sales Count,Polygon,Blockchain,721e88ba-ce1a-435c-ad92-061897fe46ae
+NFTs,Sales Count,Optimism,Blockchain,da311af6-e017-40f5-b270-5264a687c757
+NFTs,Buyers,Ethereum,Blockchain,57c0042c-e595-4269-b981-b76c55aeb684
+NFTs,Buyers,Polygon,Blockchain,ae924a80-bb4a-41ed-b040-1fe8e22b7df9
+NFTs,Buyers,Optimism,Blockchain,da4f4936-8d5f-4c60-9019-059912d347e6
