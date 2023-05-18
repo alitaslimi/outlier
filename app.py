@@ -176,20 +176,21 @@ else:
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # Plot the normalized data using a Plotly area chart
-    fig = go.Figure()
-    for i in df['Blockchain'].unique() if option_aggregation == 'Blockchain' else df[option_aggregation].unique():
-        fig.add_trace(go.Scatter(
-            name=i,
-            x=df.query(f"{option_aggregation} == @i")['Date'],
-            y=df.query(f"{option_aggregation} == @i")['Values'],
-            customdata=df.query(f"{option_aggregation} == @i")[option_aggregation],
-            mode='lines',
-            stackgroup='one',
-            groupnorm='percent',
-            hovertemplate="%{customdata}: %{y:,.1f}%<extra></extra>"
-        ))
-    fig.update_layout(title=f'Daily Share of {title}', hovermode='x unified')
-    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+    if option_metrics != 'Success Rate':
+        fig = go.Figure()
+        for i in df['Blockchain'].unique() if option_aggregation == 'Blockchain' else df[option_aggregation].unique():
+            fig.add_trace(go.Scatter(
+                name=i,
+                x=df.query(f"{option_aggregation} == @i")['Date'],
+                y=df.query(f"{option_aggregation} == @i")['Values'],
+                customdata=df.query(f"{option_aggregation} == @i")[option_aggregation],
+                mode='lines',
+                stackgroup='one',
+                groupnorm='percent',
+                hovertemplate="%{customdata}: %{y:,.1f}%<extra></extra>"
+            ))
+        fig.update_layout(title=f'Daily Share of {title}', hovermode='x unified')
+        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # View and download the data in a CSV format
     with st.expander('**View and Download Data**'):
