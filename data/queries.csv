@@ -26,24 +26,50 @@ Blocks,Total Count,Polygon,Blockchain,b83d200f-da7a-4707-96bd-a6d2a35f6039
 Blocks,Total Count,Solana,Blockchain,d21b4771-c893-4852-8a2d-21c5ccc4f163
 Fees,Average Fees,Arbitrum,Blockchain,1d4bdcb3-1256-4bb2-87ce-ee0c5cc60761
 Fees,Average Fees,Avalanche,Blockchain,a546299f-e714-42f5-9e27-ca9f4dbdd8db
+Fees,Average Fees,Axelar,Blockchain,a1190275-84e9-4997-b33d-e9aec984344e
 Fees,Average Fees,BSC,Blockchain,a4d7d4e2-a221-4b06-955d-386f08c3f99e
+Fees,Average Fees,Cosmos,Blockchain,1056205a-9935-49be-b340-4ec6f9a948d4
 Fees,Average Fees,Ethereum,Blockchain,5310f3ee-e6c7-4dc5-b370-a63b14eb7b48
+Fees,Average Fees,Gnosis,Blockchain,c7e4003e-68f6-4002-8072-3bf5ee5d6826
+Fees,Average Fees,NEAR,Blockchain,40f343ad-e442-49aa-b921-41b79301bbd6
 Fees,Average Fees,Optimism,Blockchain,dfc2e40c-5a73-4979-b2fa-755f8f0389e4
+Fees,Average Fees,Osmosis,Blockchain,be33a059-1ea4-4896-89f0-e43041d4fdd1
 Fees,Average Fees,Polygon,Blockchain,a7eaadd1-ea92-458e-90c3-68946ad5924a
+Fees,Average Fees,Solana,Blockchain,9cc5cc16-9f11-4d9f-a9ee-c02936dac8ca
 Fees,Median Fees,Arbitrum,Blockchain,00c77329-a486-43af-8a2b-22b29775fd72
 Fees,Median Fees,Avalanche,Blockchain,7f7a47a8-3a41-429f-a819-a623c3707c7e
+Fees,Median Fees,Axelar,Blockchain,806db7a1-14f1-4e94-9b2c-be39bcf111e8
 Fees,Median Fees,BSC,Blockchain,ca8165cd-eaab-48ec-a225-fda194006b48
+Fees,Median Fees,Cosmos,Blockchain,703375ae-5b6d-4e42-9a9e-51a355736bfc
 Fees,Median Fees,Ethereum,Blockchain,848403da-3562-4845-9a49-4ed975a7ac5c
 Fees,Median Fees,Gnosis,Blockchain,f552c268-2e02-4bb3-b049-bc6f6f54058d
+Fees,Median Fees,NEAR,Blockchain,06fe26c3-24e4-4c40-afcc-5dbcf6ab40a1
 Fees,Median Fees,Optimism,Blockchain,2c348c5e-6cb8-4554-a6ca-26191b5b122a
+Fees,Median Fees,Osmosis,Blockchain,3fed1018-f388-4f7f-91d8-083a9104d6f4
 Fees,Median Fees,Polygon,Blockchain,5fd32117-7bb2-497d-bc57-cbf604cc2779
+Fees,Median Fees,Solana,Blockchain,fab0cdae-dd2f-49bb-9f93-e87f926e9b3c
 Fees,Total Fees,Arbitrum,Blockchain,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
 Fees,Total Fees,Avalanche,Blockchain,8a19e1d3-479a-425c-9553-bf6f5da35613
+Fees,Total Fees,Axelar,Blockchain,2f6567e5-b7a8-4626-945a-b9f893848ece
 Fees,Total Fees,BSC,Blockchain,8a03f11f-ac64-4b58-9fa4-b9679abfbb87
+Fees,Total Fees,Cosmos,Blockchain,f49d8fb1-d267-4571-b462-3da305670ebb
 Fees,Total Fees,Ethereum,Blockchain,6a38f86f-971f-4811-a0a1-c401e0597ed8
 Fees,Total Fees,Gnosis,Blockchain,0fb6d747-ca2d-466c-83f8-4de0b0aa3a7f
+Fees,Total Fees,NEAR,Blockchain,f1f3fe9a-847a-4798-9c64-94e3ec87562f
 Fees,Total Fees,Optimism,Blockchain,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
+Fees,Total Fees,Osmosis,Blockchain,39ed12fb-36b7-447f-8c05-d6f233c611ff
 Fees,Total Fees,Polygon,Blockchain,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
+Fees,Total Fees,Solana,Blockchain,c085bb0d-6b80-4969-91f8-3cf9fa144ccf
+NFTs,Buyers,Ethereum,Blockchain,57c0042c-e595-4269-b981-b76c55aeb684
+NFTs,Buyers,Flow,Blockchain,ac4b6491-d295-4a33-b5da-1029d34e6fc4
+NFTs,Buyers,Optimism,Blockchain,da4f4936-8d5f-4c60-9019-059912d347e6
+NFTs,Buyers,Polygon,Blockchain,ae924a80-bb4a-41ed-b040-1fe8e22b7df9
+NFTs,Buyers,Solana,Blockchain,bb37bc7f-202e-4db3-b6d2-cef2188b9d5f
+NFTs,Sales Count,Ethereum,Blockchain,4a7fe959-f2d0-42d8-a6cf-db51dc5533e5
+NFTs,Sales Count,Flow,Blockchain,e83ea3f9-675b-4a28-a094-42937de5ec74
+NFTs,Sales Count,Optimism,Blockchain,da311af6-e017-40f5-b270-5264a687c757
+NFTs,Sales Count,Polygon,Blockchain,721e88ba-ce1a-435c-ad92-061897fe46ae
+NFTs,Sales Count,Solana,Blockchain,49f58102-f4bd-4816-a680-df4337c13dc7
 NFTs,Sales Volume,Ethereum,Blockchain,da48cfc3-9d11-418b-a271-26ca6b9684cc
 NFTs,Sales Volume,Flow,Blockchain,6c42bcfd-76fa-41ec-8d2b-890c3ba51ab7
 NFTs,Sales Volume,Optimism,Blockchain,8cf05e60-87c2-4a0a-8545-58d5d6f57af0
@@ -107,11 +133,3 @@ Transactions,TPS,Gnosis,Blockchain,90105463-4283-49de-806e-703d604a01d1
 Transactions,TPS,Optimism,Blockchain,790c1a65-62a1-4ecc-817a-a68b9b2e22c0
 Transactions,TPS,Polygon,Blockchain,8f7da9c8-b854-46fa-b2b1-b8d83eb1f961
 Transactions,TPS,Solana,Blockchain,f584e505-6134-48fb-86b4-2c7bb0b85be6
-NFTs,Sales Count,Ethereum,Blockchain,4a7fe959-f2d0-42d8-a6cf-db51dc5533e5
-NFTs,Sales Count,Polygon,Blockchain,721e88ba-ce1a-435c-ad92-061897fe46ae
-NFTs,Sales Count,Optimism,Blockchain,da311af6-e017-40f5-b270-5264a687c757
-NFTs,Sales Count,Solana,Blockchain,49f58102-f4bd-4816-a680-df4337c13dc7
-NFTs,Buyers,Ethereum,Blockchain,57c0042c-e595-4269-b981-b76c55aeb684
-NFTs,Buyers,Polygon,Blockchain,ae924a80-bb4a-41ed-b040-1fe8e22b7df9
-NFTs,Buyers,Optimism,Blockchain,da4f4936-8d5f-4c60-9019-059912d347e6
-NFTs,Buyers,Solana,Blockchain,bb37bc7f-202e-4db3-b6d2-cef2188b9d5f

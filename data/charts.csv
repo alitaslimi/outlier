@@ -1,19 +1,19 @@
 Segment,Metric,Aggregation,Title,Y Axis,Unit,Decimals,Description
 Addresses,Active Users,Blockchain,Total Number of Active Users,Addresses,,0,The number of unique addresses that were active as the initiator of a successful transaction.
+Transactions,Total Count,Blockchain,Total Number of Transactions,Transactions,,0,The total number of transactions whether it has been successful or not.
+Transactions,TPS,Blockchain,Transactions per Second,Transactions,,2,The number of transactions per second whether it has been successful or not.
+Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],%,2,The success rate of transactions in percent.
 Blocks,Total Count,Blockchain,Total Number of Blocks,Blocks,,0,The total number of blocks created.
-Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],$,4,The average amount of fees per transaction in U.S. dollars.
-Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],$,4,The median amount of fees per transaction in U.S. dollars.
 Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
-NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],$,0,The total volume of NFT sales in U.S. dollars.
-NFTs,Sales Volume,Marketplace,Total Sales Volume by Marketplace [USD],Volume [USD],$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
-NFTs,Sales Count,Blockchain,Total Number of Sales,Transactions,,0,The total number of NFT sales.
-NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,,0,The total number of NFT buyers.
-Swaps,Swappers,Blockchain,Total Number of Swappers,Addresses,,0,The total number of unique addresses conducting swap transactions.
-Swaps,Swappers,DEX,Total Number of Swappers,Addresses,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
+Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],$,4,The median amount of fees per transaction in U.S. dollars.
+Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],$,4,The average amount of fees per transaction in U.S. dollars.
 Swaps,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],$,0,The total volume of swaps in U.S. dollars.
 Swaps,Swaps Volume,DEX,Total Swaps Volume [USD],Volume [USD],$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
 Swaps,Total Count,Blockchain,Total Number of Swaps,Transactions,,0,The total number of swap transactions.
 Swaps,Total Count,DEX,Total Number of Swaps,Transactions,,0,The total number of swap transactions on each decentralized exchange.
-Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],%,2,The success rate of transactions in percent.
-Transactions,Total Count,Blockchain,Total Number of Transactions,Transactions,,0,The total number of transactions whether it has been successful or not.
-Transactions,TPS,Blockchain,Transactions per Second,Transactions,,2,The number of transactions per second whether it has been successful or not.
+Swaps,Swappers,Blockchain,Total Number of Swappers,Addresses,,0,The total number of unique addresses conducting swap transactions.
+Swaps,Swappers,DEX,Total Number of Swappers,Addresses,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
+NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],$,0,The total volume of NFT sales in U.S. dollars.
+NFTs,Sales Volume,Marketplace,Total Sales Volume by Marketplace [USD],Volume [USD],$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
+NFTs,Sales Count,Blockchain,Total Number of Sales,Transactions,,0,The total number of NFT sales.
+NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,,0,The total number of NFT buyers.
