@@ -11,32 +11,6 @@ from datetime import date, datetime, timedelta
 # Layout
 st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':sparkles:', layout='wide')
 
-# ------------------------------ Description ------------------------------ #
-
-# with st.expander('**How does Outlier work?**'):
-#     st.write("""
-#         **Outlier** is a multi-blockchain (cross-chain) analytical tool that allows users to select
-#         their desired metrics and compare the state of the available blockchains since **2022**.
-        
-#         The app consists of two main sections: the filtering section on top and the data visualization
-#         follows after.
-
-#         In the top part, there are multiple dropdowns and select boxes that users can interact
-#         with the determine their desired metric. The **Segment** dropdown determines the sector
-#         within the crypto industry, for example, the addresses or transactions. The **Metric**
-#         dropdown determines a specific area within the selected segment. The **Blockchains**
-#         select box provides a list of all the available blockchains for the selected metric.
-#         After that, users are able to select the scale of the following charts and also, determine
-#         the date range they would like to see the data for.
-
-#         The visualization part includes three different charts. The first one is a line chart
-#         showing the values of the selected metric for the selected blockchains on a daily basis.
-#         The second chart is a normalized area chart that depicts the daily share of the selected
-#         metric for different blockchains. Lastly, the third chart shows a normalized heatmap of
-#         the selected metric over different days of a week that demonstrates when the selected
-#         metrics had the highest/ lowest activity.
-#     """)
-
 # ------------------------------ Filters ------------------------------ #
 
 # Variables
@@ -76,9 +50,9 @@ option_blockchains = st.multiselect(
 data_file = f"data/{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation.lower()}_daily.csv"
 df = pd.read_csv(data_file)
 
-# Check whether the data is up to date or not, the time difference is currently 2 days
+# Check whether the data is up to date or not, the time difference is currently 1 day
 # If the data is up to date, the local loaded file will be filtered using the selected blockchains
-if df['Date'].iloc[0] >= str(date.today() - timedelta(2)) and df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size == df['Blockchain'].unique().size:
+if df['Date'].iloc[0] >= str(date.today() - timedelta(1)) and df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size == df['Blockchain'].unique().size:
     df = df.query("Blockchain == @option_blockchains")
 
 # If the data is not up to date, the data will be pulled online using their subsequent query ID
@@ -91,7 +65,7 @@ if df['Date'].iloc[0] >= str(date.today() - timedelta(2)) and df.loc[df['Date'] 
 else:
     query_result = pd.DataFrame()
     for blockchain in option_blockchains:
-        if df[df['Blockchain'] == blockchain]['Date'].iloc[0] < str(date.today() - timedelta(2)):
+        if df[df['Blockchain'] == blockchain]['Date'].iloc[0] < str(date.today() - timedelta(1)):
             query_id = queries.query("Segment == @option_segments & Metric == @option_metrics & Blockchain == @blockchain & Aggregation == @option_aggregation")['Query'].iloc[0]
             query_result = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{query_id}/data/latest")
             query_result['Blockchain'] = blockchain
