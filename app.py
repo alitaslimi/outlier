@@ -14,26 +14,27 @@ st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':spar
 # ------------------------------ Filters ------------------------------ #
 
 # Variables
+charts = pd.read_csv('data/charts.csv')
 queries = pd.read_csv('data/queries.csv')
 
-# Filter Segments And Metrics
+# Filter Segment, Metric, and Aggregation
 c1, c2, c3 = st.columns(3)
 with c1:
     option_segments = st.selectbox(
         label='**Segment**',
-        options=queries['Segment'].unique(),
+        options=charts['Segment'].unique(),
         key='option_segments'
     )
 with c2:
     option_metrics = st.selectbox(
         label='**Metric**',
-        options=queries.query("Segment == @option_segments")['Metric'].unique(),
+        options=charts.query("Segment == @option_segments")['Metric'].unique(),
         key='option_metrics'
     )
 with c3:
     option_aggregation = st.selectbox(
         label='**Aggregation**',
-        options=queries.query("Segment == @option_segments & Metric == @option_metrics")['Aggregation'].unique(),
+        options=charts.query("Segment == @option_segments & Metric == @option_metrics")['Aggregation'].unique(),
         key='option_aggregation'
     )
 
@@ -107,9 +108,6 @@ with c2:
 st.divider()
 
 # ------------------------------ Visualization ------------------------------ #
-
-# Chart Information
-charts = pd.read_csv('data/charts.csv')
 
 # Chart Theme
 theme_plotly = 'streamlit'
