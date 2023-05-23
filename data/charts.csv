@@ -7,6 +7,8 @@ Blocks,Total Count,Blockchain,Total Number of Blocks,Blocks,,0,The total number 
 Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
 Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],$,4,The median amount of fees per transaction in U.S. dollars.
 Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],$,4,The average amount of fees per transaction in U.S. dollars.
+Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,,0,The total amount of gas used to conduct transactions.
+Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,,0,The median amount of gas used per transaction.
 Swaps,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],$,0,The total volume of swaps in U.S. dollars.
 Swaps,Swaps Volume,DEX,Total Swaps Volume [USD],Volume [USD],$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
 Swaps,Total Count,Blockchain,Total Number of Swaps,Transactions,,0,The total number of swap transactions.
