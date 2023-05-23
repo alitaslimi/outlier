@@ -48,6 +48,17 @@ Fees,Median Fees,Optimism,Blockchain,2c348c5e-6cb8-4554-a6ca-26191b5b122a
 Fees,Median Fees,Osmosis,Blockchain,3fed1018-f388-4f7f-91d8-083a9104d6f4
 Fees,Median Fees,Polygon,Blockchain,5fd32117-7bb2-497d-bc57-cbf604cc2779
 Fees,Median Fees,Solana,Blockchain,fab0cdae-dd2f-49bb-9f93-e87f926e9b3c
+Fees,Median Gas Used,Arbitrum,Blockchain,25b8abca-71fe-44f2-8624-80f91bbfcca0
+Fees,Median Gas Used,Avalanche,Blockchain,1d3d3305-9778-45b1-8b5a-60c92a47af11
+Fees,Median Gas Used,Axelar,Blockchain,7755b499-e9a7-4e20-befc-738e31251dbf
+Fees,Median Gas Used,BSC,Blockchain,f015d814-61a4-48c5-bdb9-cd57d7a005ac
+Fees,Median Gas Used,Cosmos,Blockchain,da232682-0d62-4923-a726-e2c40f4390eb
+Fees,Median Gas Used,Ethereum,Blockchain,8805f945-5c5e-4b6d-8c05-ef77cbfb30bf
+Fees,Median Gas Used,Gnosis,Blockchain,ecb6a4c8-64f8-494f-b364-e3a3dfc2ef01
+Fees,Median Gas Used,NEAR,Blockchain,367607c1-0c66-40df-a892-b9dcb83a9968
+Fees,Median Gas Used,Optimism,Blockchain,529c76b5-7833-444d-87b5-063ff543236a
+Fees,Median Gas Used,Osmosis,Blockchain,42deca37-5c50-4571-acd7-21e445024e63
+Fees,Median Gas Used,Polygon,Blockchain,16f29502-1418-47aa-a2cf-19915e6bead0
 Fees,Total Fees,Arbitrum,Blockchain,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
 Fees,Total Fees,Avalanche,Blockchain,8a19e1d3-479a-425c-9553-bf6f5da35613
 Fees,Total Fees,Axelar,Blockchain,2f6567e5-b7a8-4626-945a-b9f893848ece
@@ -60,6 +71,17 @@ Fees,Total Fees,Optimism,Blockchain,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
 Fees,Total Fees,Osmosis,Blockchain,39ed12fb-36b7-447f-8c05-d6f233c611ff
 Fees,Total Fees,Polygon,Blockchain,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
 Fees,Total Fees,Solana,Blockchain,c085bb0d-6b80-4969-91f8-3cf9fa144ccf
+Fees,Total Gas Used,Arbitrum,Blockchain,5b08007b-0627-40ac-b7db-78de72fb9308
+Fees,Total Gas Used,Avalanche,Blockchain,69a1bceb-645b-49a6-84db-886a0f6a336c
+Fees,Total Gas Used,Axelar,Blockchain,3a06f4d0-960c-49f2-bee1-3f601e9f20b6
+Fees,Total Gas Used,BSC,Blockchain,b0e5c8b9-4816-4307-8cc1-965a5c85d4ea
+Fees,Total Gas Used,Cosmos,Blockchain,3feec213-df0f-4568-89fd-b92063c0207c
+Fees,Total Gas Used,Ethereum,Blockchain,44d2937c-b11c-4478-8408-3a0dcd79cb6c
+Fees,Total Gas Used,Gnosis,Blockchain,89b42f15-7cfc-4e0a-b20b-80643e89f0d2
+Fees,Total Gas Used,NEAR,Blockchain,d551df43-a7f9-4b74-99ae-4bb6ae4a136d
+Fees,Total Gas Used,Optimism,Blockchain,9f8cf30a-8f0a-4be0-ad48-2422f6bfdc26
+Fees,Total Gas Used,Osmosis,Blockchain,4ece7e32-2cc5-4e2b-8393-fdcff50a94ce
+Fees,Total Gas Used,Polygon,Blockchain,cb2e8107-98c9-45ee-8909-34f1f3d53ff9
 NFTs,Buyers,Ethereum,Blockchain,57c0042c-e595-4269-b981-b76c55aeb684
 NFTs,Buyers,Flow,Blockchain,ac4b6491-d295-4a33-b5da-1029d34e6fc4
 NFTs,Buyers,Optimism,Blockchain,da4f4936-8d5f-4c60-9019-059912d347e6
@@ -133,25 +155,3 @@ Transactions,TPS,Gnosis,Blockchain,90105463-4283-49de-806e-703d604a01d1
 Transactions,TPS,Optimism,Blockchain,790c1a65-62a1-4ecc-817a-a68b9b2e22c0
 Transactions,TPS,Polygon,Blockchain,8f7da9c8-b854-46fa-b2b1-b8d83eb1f961
 Transactions,TPS,Solana,Blockchain,f584e505-6134-48fb-86b4-2c7bb0b85be6
-Fees,Total Gas Used,Ethereum,Blockchain,44d2937c-b11c-4478-8408-3a0dcd79cb6c
-Fees,Total Gas Used,Arbitrum,Blockchain,5b08007b-0627-40ac-b7db-78de72fb9308
-Fees,Total Gas Used,Avalanche,Blockchain,69a1bceb-645b-49a6-84db-886a0f6a336c
-Fees,Total Gas Used,BSC,Blockchain,b0e5c8b9-4816-4307-8cc1-965a5c85d4ea
-Fees,Total Gas Used,Gnosis,Blockchain,89b42f15-7cfc-4e0a-b20b-80643e89f0d2
-Fees,Total Gas Used,Optimism,Blockchain,9f8cf30a-8f0a-4be0-ad48-2422f6bfdc26
-Fees,Total Gas Used,Polygon,Blockchain,cb2e8107-98c9-45ee-8909-34f1f3d53ff9
-Fees,Total Gas Used,Axelar,Blockchain,3a06f4d0-960c-49f2-bee1-3f601e9f20b6
-Fees,Total Gas Used,Cosmos,Blockchain,3feec213-df0f-4568-89fd-b92063c0207c
-Fees,Total Gas Used,Osmosis,Blockchain,4ece7e32-2cc5-4e2b-8393-fdcff50a94ce
-Fees,Total Gas Used,NEAR,Blockchain,d551df43-a7f9-4b74-99ae-4bb6ae4a136d
-Fees,Median Gas Used,Ethereum,Blockchain,8805f945-5c5e-4b6d-8c05-ef77cbfb30bf
-Fees,Median Gas Used,Arbitrum,Blockchain,25b8abca-71fe-44f2-8624-80f91bbfcca0
-Fees,Median Gas Used,Avalanche,Blockchain,1d3d3305-9778-45b1-8b5a-60c92a47af11
-Fees,Median Gas Used,Axelar,Blockchain,7755b499-e9a7-4e20-befc-738e31251dbf
-Fees,Median Gas Used,BSC,Blockchain,f015d814-61a4-48c5-bdb9-cd57d7a005ac
-Fees,Median Gas Used,Cosmos,Blockchain,da232682-0d62-4923-a726-e2c40f4390eb
-Fees,Median Gas Used,NEAR,Blockchain,367607c1-0c66-40df-a892-b9dcb83a9968
-Fees,Median Gas Used,Gnosis,Blockchain,ecb6a4c8-64f8-494f-b364-e3a3dfc2ef01
-Fees,Median Gas Used,Optimism,Blockchain,529c76b5-7833-444d-87b5-063ff543236a
-Fees,Median Gas Used,Osmosis,Blockchain,42deca37-5c50-4571-acd7-21e445024e63
-Fees,Median Gas Used,Polygon,Blockchain,16f29502-1418-47aa-a2cf-19915e6bead0
