@@ -8,7 +8,6 @@ from datetime import date, datetime, timedelta
 
 # ------------------------------ Configuration ------------------------------ #
 
-# Layout
 st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':sparkles:', layout='wide')
 
 # ------------------------------ Filters ------------------------------ #
@@ -148,7 +147,8 @@ else:
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # Plot the normalized data using a Plotly area chart
-    if option_metrics != 'Success Rate':
+    normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
+    if normalized_chart:
         fig = go.Figure()
         for i in df['Blockchain'].unique() if option_aggregation == 'Blockchain' else df[option_aggregation].unique():
             fig.add_trace(go.Scatter(
