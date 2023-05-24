@@ -16,7 +16,6 @@ Here is the list of upcoming features that will be added to the app. The list it
   - Addresses, Active Users, Blockchain, Flow
 - Charts
   - Blocks, Block Time, Blockchain
-  - Fees, Average Gas Used, Blockchain
   - Fees, Average Gas Price, Blockchain
   - Fees, Median Gas Price, Blockchain
   - Fees, Base Fee per Gas, Blockchain
