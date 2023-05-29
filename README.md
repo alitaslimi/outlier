@@ -19,9 +19,7 @@ Here is the list of upcoming features that will be added to the app. The list it
   - Fees, Average Gas Price, Blockchain
   - Fees, Median Gas Price, Blockchain
   - Fees, Base Fee per Gas, Blockchain
-  - NFTs, Traded NFTs, Blockchain
-  - NFTs, Traded Collections, Blockchain
   - NFTs, Sales Count, Marketplace
   - NFTs, Buyers, Marketplace
   - NFTs, Traded NFTs, Marketplace
-  - NFTs, Traded NFTs, Marketplace
+  - NFTs, Traded NFT Collections, Marketplace
