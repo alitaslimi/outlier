@@ -20,3 +20,5 @@ NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,
 NFTs,Sales Volume,Marketplace,Total Sales Volume by Marketplace [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
 NFTs,Sale Count,Blockchain,Total Number of Sales,Transactions,TRUE,FALSE,,0,The total number of NFT sales.
 NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,TRUE,FALSE,,0,The total number of NFT buyers.
+NFTs,Traded NFTs,Blockchain,Total Number of Traded NFTs,NFTs,TRUE,FALSE,,0,The total number of Traded NFTs.
+NFTs,Traded Collections,Blockchain,Total Number of Traded NFT Collections,Collections,TRUE,FALSE,,0,The total number of Traded NFT Collections.
