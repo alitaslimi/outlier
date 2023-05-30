@@ -146,6 +146,13 @@ Swaps,Swaps Volume,Avalanche,DEX,0806540f-b6d0-475a-bfb1-664b03696954
 Swaps,Swaps Volume,Ethereum,DEX,fd7ad404-b134-4838-b99a-29605c30fba3
 Swaps,Swaps Volume,Optimism,DEX,56817fef-88d7-457a-8ace-3c17ee2655b2
 Swaps,Swaps Volume,Polygon,DEX,97087c8d-e874-4b57-af72-19cba65b9850
+Tokens,Transfer Count,Arbitrum,Blockchain,17a1e198-eddc-4ed4-9b37-37dfdb8583ae
+Tokens,Transfer Count,Avalanche,Blockchain,d4e487a3-b5c2-4f71-87d4-34a8826e60a9
+Tokens,Transfer Count,BSC,Blockchain,ec65ff5e-7b41-45da-8d0a-3c2f1c114170
+Tokens,Transfer Count,Ethereum,Blockchain,1cb5e4ef-03b9-4f05-a3cf-6a7b106c35c9
+Tokens,Transfer Count,NEAR,Blockchain,e57506d8-6651-4e40-bfec-212a40682ea1
+Tokens,Transfer Count,Optimism,Blockchain,e99650fa-2dbc-4f15-b929-6aba35e1d600
+Tokens,Transfer Count,Polygon,Blockchain,68a4070e-a618-4c2a-b0af-810d9d7e3fa7
 Transactions,Success Rate,Arbitrum,Blockchain,6f851fa5-6d39-4a55-8438-541433b0b4ad
 Transactions,Success Rate,Avalanche,Blockchain,fdba0b44-0ccf-47a1-8b86-fcb0d881f60d
 Transactions,Success Rate,BSC,Blockchain,3afcb160-3152-4768-96fb-48df0679e6f9

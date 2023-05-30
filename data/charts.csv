@@ -10,6 +10,7 @@ Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],FALSE
 Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,TRUE,FALSE,,0,The total amount of gas used to conduct transactions.
 Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,FALSE,FALSE,,0,The median amount of gas used per transaction.
 Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,FALSE,FALSE,,0,The average amount of gas used per transaction.
+Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,TRUE,FALSE,,0,The total number of token transfer transactions.
 Swaps,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
 Swaps,Swaps Volume,DEX,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
 Swaps,Swap Count,Blockchain,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions.
