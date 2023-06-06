@@ -1,25 +1,26 @@
 Segment,Metric,Aggregation,Title,Y Axis,Normalized,Heatmap,Unit,Decimals,Description
 Addresses,Active Users,Blockchain,Total Number of Active Users,Addresses,TRUE,FALSE,,0,The number of unique addresses that were active as the initiator of a successful transaction.
-Transactions,Transaction Count,Blockchain,Total Number of Transactions,Transactions,TRUE,FALSE,,0,The total number of transactions whether it has been successful or not.
-Transactions,TPS,Blockchain,Transactions per Second,Transactions,FALSE,FALSE,,2,The number of transactions per second whether it has been successful or not.
-Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],FALSE,FALSE,%,2,The success rate of transactions in percent.
 Blocks,Block Count,Blockchain,Total Number of Blocks,Blocks,TRUE,FALSE,,0,The total number of blocks created.
-Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],TRUE,FALSE,$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
-Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],FALSE,FALSE,$,4,The median amount of fees per transaction in U.S. dollars.
+CEXs,Net Flow,Exchange,Total Net Flow Volume,Volume [USD],FALSE,FALSE,$,0,The total net flow volume in U.S. dollars through each centralized exchange.
+DEXs,Swap Count,Blockchain,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions.
+DEXs,Swap Count,Exchange,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions on each decentralized exchange.
+DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
+DEXs,Swappers,Exchange,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
+DEXs,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
+DEXs,Swaps Volume,Exchange,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
 Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],FALSE,FALSE,$,4,The average amount of fees per transaction in U.S. dollars.
-Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,TRUE,FALSE,,0,The total amount of gas used to conduct transactions.
-Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,FALSE,FALSE,,0,The median amount of gas used per transaction.
 Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,FALSE,FALSE,,0,The average amount of gas used per transaction.
-Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,TRUE,FALSE,,0,The total number of token transfer transactions.
-Swaps,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
-Swaps,Swaps Volume,DEX,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
-Swaps,Swap Count,Blockchain,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions.
-Swaps,Swap Count,DEX,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions on each decentralized exchange.
-Swaps,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
-Swaps,Swappers,DEX,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
-NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales in U.S. dollars.
-NFTs,Sales Volume,Marketplace,Total Sales Volume by Marketplace [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
-NFTs,Sale Count,Blockchain,Total Number of Sales,Transactions,TRUE,FALSE,,0,The total number of NFT sales.
+Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],FALSE,FALSE,$,4,The median amount of fees per transaction in U.S. dollars.
+Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,FALSE,FALSE,,0,The median amount of gas used per transaction.
+Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],TRUE,FALSE,$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
+Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,TRUE,FALSE,,0,The total amount of gas used to conduct transactions.
 NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,TRUE,FALSE,,0,The total number of NFT buyers.
-NFTs,Traded NFTs,Blockchain,Total Number of Traded NFTs,NFTs,TRUE,FALSE,,0,The total number of Traded NFTs.
+NFTs,Sale Count,Blockchain,Total Number of Sales,Transactions,TRUE,FALSE,,0,The total number of NFT sales.
+NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales in U.S. dollars.
+NFTs,Sales Volume,Marketplace,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
 NFTs,Traded Collections,Blockchain,Total Number of Traded NFT Collections,Collections,TRUE,FALSE,,0,The total number of Traded NFT Collections.
+NFTs,Traded NFTs,Blockchain,Total Number of Traded NFTs,NFTs,TRUE,FALSE,,0,The total number of Traded NFTs.
+Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,TRUE,FALSE,,0,The total number of token transfer transactions.
+Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],FALSE,FALSE,%,2,The success rate of transactions in percent.
+Transactions,TPS,Blockchain,Transactions per Second,Transactions,FALSE,FALSE,,2,The number of transactions per second whether it has been successful or not.
+Transactions,Transaction Count,Blockchain,Total Number of Transactions,Transactions,TRUE,FALSE,,0,The total number of transactions whether it has been successful or not.
