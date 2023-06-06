@@ -123,8 +123,13 @@ df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df = df.query("Blockchain == @option_blockchains & Date >= @option_dates[0] & Date <= @option_dates[1]").reset_index(drop=True)
 
 # Apply the aggregates filter to the data frame
+series = option_aggregation
 if option_aggregation != 'Blockchain':
-    df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg('sum').reset_index()
+    if len(option_aggregates) > 1:
+        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg('sum').reset_index()
+    else:
+        series = 'Blockchain'
+        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', 'Blockchain']).agg('sum').reset_index()
 
 # Checks whether the minimum number of blockchains is selected or not
 # Currently, the limit is at least 2 blockchains
@@ -141,7 +146,7 @@ else:
 
     # Plot the data using a Plotly line chart
     df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
-    fig = px.line(df, x='Date', y='Values', color=option_aggregation, custom_data=[option_aggregation], title=f"Daily {title}", log_y=(option_scale == 'Log'))
+    fig = px.line(df, x='Date', y='Values', color=series, custom_data=[series], title=f"Daily {title}", log_y=(option_scale == 'Log'))
     fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, hovermode='x unified')
     fig.update_traces(hovertemplate=f"%{{customdata}}: {unit}%{{y:,.{decimals}f}}<extra></extra>")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
