@@ -121,10 +121,12 @@ st.info(f"**Metric Description**: {metric_descrption}", icon="💡")
 # Apply the blockchains and date filters to the data frame
 df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df = df.query("Blockchain == @option_blockchains & Date >= @option_dates[0] & Date <= @option_dates[1]").reset_index(drop=True)
+df_print = df.copy()
 
 # Apply the aggregates filter to the data frame
 series = option_aggregation
 if option_aggregation != 'Blockchain':
+    df_print = df.query(f"{option_aggregation} == {option_aggregates}")
     if len(option_aggregates) > 1:
         df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg('sum').reset_index()
     else:
@@ -135,6 +137,9 @@ if option_aggregation != 'Blockchain':
 # Currently, the limit is at least 2 blockchains
 if len(option_blockchains) < 2:
     st.warning('Please select at least 2 blockchains to see the metrics.')
+    
+elif option_aggregation != 'Blockchain' and len(option_aggregates) == 0:
+    st.warning('Please select at least 1 aggregates to see the metrics.')
 
 # Plotly Charts
 else:
@@ -155,12 +160,12 @@ else:
     normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
     if normalized_chart:
         fig = go.Figure()
-        for i in df['Blockchain'].unique() if option_aggregation == 'Blockchain' else df[option_aggregation].unique():
+        for i in df[series].unique():
             fig.add_trace(go.Scatter(
                 name=i,
-                x=df.query(f"{option_aggregation} == @i")['Date'],
-                y=df.query(f"{option_aggregation} == @i")['Values'],
-                customdata=df.query(f"{option_aggregation} == @i")[option_aggregation],
+                x=df.query(f"{series} == @i")['Date'],
+                y=df.query(f"{series} == @i")['Values'],
+                customdata=df.query(f"{series} == @i")['Blockchain' if series == 'Blockchain' else option_aggregation],
                 mode='lines',
                 stackgroup='one',
                 groupnorm='percent',
@@ -172,15 +177,15 @@ else:
     # View and download the data in a CSV format
     with st.expander('**View and Download Data**'):
         column_values = f"{option_segments} {option_metrics}"
-        df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
-        df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
-        df = df.rename(columns={'Values': column_values})
-        df = df[['Date', option_aggregation, column_values]]
-        df.index += 1
-        st.dataframe(df, use_container_width=True)
+        df_print['Date'] = df_print['Date'].dt.strftime('%Y-%m-%d')
+        df_print = df_print.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
+        df_print = df_print.rename(columns={'Values': column_values})
+        df_print = df_print[['Date', 'Blockchain', option_aggregation, column_values]] if option_aggregation != 'Blockchain' else df_print[['Date', 'Blockchain', column_values]]
+        df_print.index += 1
+        st.dataframe(df_print, use_container_width=True)
         st.download_button(
             label="Download CSV",
-            data=df.to_csv().encode('utf-8'),
+            data=df_print.to_csv().encode('utf-8'),
             file_name=f"outlier_{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation}_daily.csv",
             mime='text/csv',
         )
