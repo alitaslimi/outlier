@@ -12,15 +12,15 @@ Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,FALSE,FALSE,,0,The median am
 Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,FALSE,FALSE,,0,The average amount of gas used per transaction.
 DEXs,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
 DEXs,Swaps Volume,Exchange,Total Swaps Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
-DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
-DEXs,Swappers,Exchange,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
 DEXs,Swap Count,Blockchain,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions.
 DEXs,Swap Count,Exchange,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The total number of swap transactions on each decentralized exchange.
+DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
+DEXs,Swappers,Exchange,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
 CEXs,Net Flow,Exchange,Total Net Flow Volume,Volume [USD],FALSE,FALSE,$,0,The total net flow volume in U.S. dollars through each centralized exchange.
 NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales in U.S. dollars.
 NFTs,Sales Volume,Marketplace,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
-NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,TRUE,FALSE,,0,The total number of NFT buyers.
 NFTs,Sale Count,Blockchain,Total Number of Sales,Transactions,TRUE,FALSE,,0,The total number of NFT sales.
+NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,TRUE,FALSE,,0,The total number of NFT buyers.
 NFTs,Traded NFTs,Blockchain,Total Number of Traded NFTs,NFTs,TRUE,FALSE,,0,The total number of Traded NFTs.
 NFTs,Traded Collections,Blockchain,Total Number of Traded NFT Collections,Collections,TRUE,FALSE,,0,The total number of Traded NFT Collections.
 Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,TRUE,FALSE,,0,The total number of token transfer transactions.
