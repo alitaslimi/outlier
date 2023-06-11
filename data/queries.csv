@@ -183,3 +183,5 @@ Transactions,Transaction Count,Solana,Blockchain,936a3f9a-caa4-4609-9c14-7dbfd04
 CEXs,Net Flow,Arbitrum,Exchange,01b91e16-8dbf-4f11-becc-a130f396d185
 CEXs,Net Flow,Ethereum,Exchange,d4df61ec-0de8-4528-8044-855e6248db82
 CEXs,Net Flow,Polygon,Exchange,30de5014-7bc1-4942-a1ad-8b664d893bce
+CEXs,Net Flow,Avalanche,Exchange,5840bcf4-a66e-4bdc-b7b7-f354014ac11d
+CEXs,Net Flow,BSC,Exchange,4d2ac4ad-65cd-4482-b41a-606d10fab663
