@@ -16,6 +16,8 @@ DEXs,Swap Count,Exchange,Total Number of Swaps,Transactions,TRUE,FALSE,,0,The to
 DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
 DEXs,Swappers,Exchange,Total Number of Swappers,Addresses,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
 CEXs,Net Flow,Exchange,Total Net Flow Volume,Volume [USD],FALSE,FALSE,$,0,The total net flow volume in U.S. dollars through each centralized exchange.
+CEXs,Inflows,Exchange,Total Inflow Volume,Volume [USD],TRUE,FALSE,$,0,The total inflowing volume in U.S. dollars through each centralized exchange.
+CEXs,Outflows,Exchange,Total Outflow Volume,Volume [USD],TRUE,FALSE,$,0,The total outflowing volume in U.S. dollars through each centralized exchange.
 NFTs,Sales Volume,Blockchain,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales in U.S. dollars.
 NFTs,Sales Volume,Marketplace,Total Sales Volume [USD],Volume [USD],TRUE,FALSE,$,0,The total volume of NFT sales by each marketplace in U.S. dollars.
 NFTs,Sale Count,Blockchain,Total Number of Sales,Transactions,TRUE,FALSE,,0,The total number of NFT sales.
