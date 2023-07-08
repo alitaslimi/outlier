@@ -3,7 +3,6 @@ Addresses,Active Users,Blockchain,Total Number of Active Users,Addresses,TRUE,FA
 Transactions,Transaction Count,Blockchain,Total Number of Transactions,Transactions,TRUE,FALSE,,0,The total number of transactions whether it has been successful or not.
 Transactions,TPS,Blockchain,Transactions per Second,Transactions,FALSE,FALSE,,2,The number of transactions per second whether it has been successful or not.
 Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],FALSE,FALSE,%,2,The success rate of transactions in percent.
-Blocks,Block Count,Blockchain,Total Number of Blocks,Blocks,TRUE,FALSE,,0,The total number of blocks created.
 Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],TRUE,FALSE,$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
 Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],FALSE,FALSE,$,4,The median amount of fees per transaction in U.S. dollars.
 Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],FALSE,FALSE,$,4,The average amount of fees per transaction in U.S. dollars.
@@ -24,3 +23,4 @@ NFTs,Buyers,Blockchain,Total Number of Buyers,Addresses,TRUE,FALSE,,0,The total 
 NFTs,Traded NFTs,Blockchain,Total Number of Traded NFTs,NFTs,TRUE,FALSE,,0,The total number of Traded NFTs.
 NFTs,Traded Collections,Blockchain,Total Number of Traded NFT Collections,Collections,TRUE,FALSE,,0,The total number of Traded NFT Collections.
 Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,TRUE,FALSE,,0,The total number of token transfer transactions.
+Blocks,Block Count,Blockchain,Total Number of Blocks,Blocks,TRUE,FALSE,,0,The total number of blocks created.
