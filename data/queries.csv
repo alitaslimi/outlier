@@ -161,6 +161,10 @@ NFTs,Traded NFTs,Blockchain,Flow,a43b0749-0d9b-4227-a63a-3edfdf32fed2
 NFTs,Traded NFTs,Blockchain,Optimism,0ee768cd-ac50-4913-9491-ca3027773d65
 NFTs,Traded NFTs,Blockchain,Polygon,f42b1c70-0cb8-467d-b287-9592f1b9ec6a
 NFTs,Traded NFTs,Blockchain,Solana,01347596-ef2d-4b02-9a7e-020949e3f95e
+Tokens,Receivers,Blockchain,Ethereum,af374fa6-d6c2-460f-8f5b-0144e0cee38f
+Tokens,Receivers,Blockchain,Polygon,8eb258cd-3361-4bc9-bd2b-336bf8b31353
+Tokens,Senders,Blockchain,Ethereum,1b0576c1-e698-43cf-95ee-5afd2fad606f
+Tokens,Senders,Blockchain,Polygon,ec387d7a-7cc1-4c13-9cec-609eabc2db40
 Tokens,Transfer Count,Blockchain,Arbitrum,17a1e198-eddc-4ed4-9b37-37dfdb8583ae
 Tokens,Transfer Count,Blockchain,Avalanche,d4e487a3-b5c2-4f71-87d4-34a8826e60a9
 Tokens,Transfer Count,Blockchain,Ethereum,1cb5e4ef-03b9-4f05-a3cf-6a7b106c35c9
