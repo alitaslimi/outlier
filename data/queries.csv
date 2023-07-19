@@ -13,6 +13,7 @@ Addresses,Active Users,Blockchain,Solana,ac97258e-6a5f-49a1-8e00-11378d9c5745
 Blocks,Block Count,Blockchain,Arbitrum,fd1d0bbd-931d-4a05-b875-a289e8e88363
 Blocks,Block Count,Blockchain,Avalanche,cba7ab03-9172-482c-a281-6c659501e745
 Blocks,Block Count,Blockchain,Axelar,d3183666-a318-4727-9456-7b7b43e91227
+Blocks,Block Count,Blockchain,Bitcoin,e8181827-f0cb-4425-83fa-4ff4a214ecc0
 Blocks,Block Count,Blockchain,BSC,cf7593dd-0075-4037-a3c9-b9ff9795ff41
 Blocks,Block Count,Blockchain,Ethereum,03868e7f-5721-48f7-96cf-ee584845761c
 Blocks,Block Count,Blockchain,Flow,8608dc81-76cc-4047-a187-c4a2cee9031c
@@ -193,6 +194,7 @@ Transactions,TPS,Blockchain,Solana,f584e505-6134-48fb-86b4-2c7bb0b85be6
 Transactions,Transaction Count,Blockchain,Arbitrum,7548f19b-d7cb-4fb2-8ed1-75ffefebae15
 Transactions,Transaction Count,Blockchain,Avalanche,278d4896-0e1a-4697-9551-f12529567920
 Transactions,Transaction Count,Blockchain,Axelar,9ebbfd40-82f3-432f-a321-a20f721eb422
+Transactions,Transaction Count,Blockchain,Bitcoin,07283929-e901-4f7d-b2fc-09dc60208438
 Transactions,Transaction Count,Blockchain,BSC,63ef97f1-0b06-4278-8117-b0307986ea72
 Transactions,Transaction Count,Blockchain,Ethereum,7c3aca82-c59a-40fe-8724-d6494ecaa26e
 Transactions,Transaction Count,Blockchain,Flow,97332a17-7c1d-4c98-bc84-6e5708a89362
