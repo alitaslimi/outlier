@@ -2,6 +2,7 @@ Segment,Metric,Aggregation,Blockchain,Query
 Addresses,Active Users,Blockchain,Arbitrum,782b10f0-07a8-4684-9b91-19d76e5bd375
 Addresses,Active Users,Blockchain,Avalanche,df3cd9e3-bab6-4827-a43b-d0d250fadfc6
 Addresses,Active Users,Blockchain,Axelar,a1448fa8-4ddc-4b9b-a051-75e4eb84a6c5
+Addresses,Active Users,Blockchain,Base,c548d142-fcc0-450e-9fc1-97261d580c85
 Addresses,Active Users,Blockchain,BSC,895bf8a9-e286-45de-9d80-41120431badc
 Addresses,Active Users,Blockchain,Ethereum,0df969ce-d07b-40d1-a6ca-d792fcd09f01
 Addresses,Active Users,Blockchain,Gnosis,edb926eb-a179-4a8c-a8fd-ddfd218249c6
@@ -194,6 +195,7 @@ Transactions,TPS,Blockchain,Solana,f584e505-6134-48fb-86b4-2c7bb0b85be6
 Transactions,Transaction Count,Blockchain,Arbitrum,7548f19b-d7cb-4fb2-8ed1-75ffefebae15
 Transactions,Transaction Count,Blockchain,Avalanche,278d4896-0e1a-4697-9551-f12529567920
 Transactions,Transaction Count,Blockchain,Axelar,9ebbfd40-82f3-432f-a321-a20f721eb422
+Transactions,Transaction Count,Blockchain,Base,61ccca7a-7ac7-4582-9036-555e34d6adcf
 Transactions,Transaction Count,Blockchain,Bitcoin,07283929-e901-4f7d-b2fc-09dc60208438
 Transactions,Transaction Count,Blockchain,BSC,63ef97f1-0b06-4278-8117-b0307986ea72
 Transactions,Transaction Count,Blockchain,Ethereum,7c3aca82-c59a-40fe-8724-d6494ecaa26e
