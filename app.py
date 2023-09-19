@@ -50,6 +50,8 @@ option_blockchains = st.multiselect(
 data_file = f"data/{option_segments.lower()}_{option_metrics.lower().replace(' ', '_')}_{option_aggregation.lower()}_daily.csv"
 df = pd.read_csv(data_file)
 
+local_save = True
+
 # Check whether the data is up to date or not, the time difference is currently 1 day
 # If the data is up to date, the local loaded file will be filtered using the selected blockchains
 if df['Date'].iloc[0] >= str(date.today() - timedelta(1)) and df.loc[df['Date'] == df['Date'].iloc[0], 'Blockchain'].unique().size == df['Blockchain'].unique().size:
@@ -72,7 +74,8 @@ else:
             query_result['Date'] = query_result['Date'].dt.strftime('%Y-%m-%d')
             df = pd.concat([query_result[~query_result['Date'].isin(df[df['Blockchain'] == blockchain]['Date'])], df]).sort_values(['Date', 'Blockchain'], ascending=[False, True]).reset_index(drop=True)
 
-    df.to_csv(data_file, index=False)
+    if local_save:
+        df.to_csv(data_file, index=False)
 
 # Date Alignment
 # Removes the last date if it only contains a portion of blockchains instead of all of them
@@ -149,14 +152,23 @@ else:
     unit = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Unit'].fillna('').iloc[0]
     decimals = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Decimals'].iloc[0]
 
-    # Plot the data using a Plotly line chart
+    # Plot the average data using Plotly's bar chart
+    average_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Average'].iloc[0]
+    if average_chart:
+        dfa = df.groupby('Blockchain').agg({'Values': 'mean'}).sort_values('Values', ascending=False).reset_index()
+        fig = px.bar(dfa, x='Blockchain', y='Values', color='Blockchain', title=f"Average Daily {title}", log_y=(option_scale == 'Log'))
+        fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Transactions', xaxis={'categoryorder':'total ascending'}, hovermode='x unified')
+        fig.update_traces(hovertemplate=f"{unit}%{{y:,.{decimals}f}}<extra></extra>")
+        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+    # Plot the daily data using Plotly's line chart
     df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
     fig = px.line(df, x='Date', y='Values', color=series, custom_data=[series], title=f"Daily {title}", log_y=(option_scale == 'Log'))
     fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, hovermode='x unified')
     fig.update_traces(hovertemplate=f"%{{customdata}}: {unit}%{{y:,.{decimals}f}}<extra></extra>")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-    # Plot the normalized data using a Plotly area chart
+    # Plot the daily normalized data using Plotly's area chart
     normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
     if normalized_chart:
         fig = go.Figure()
