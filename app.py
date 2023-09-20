@@ -3,6 +3,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.subplots as sp
 import plotly.graph_objects as go
 from datetime import date, datetime, timedelta
 
@@ -152,14 +153,31 @@ else:
     unit = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Unit'].fillna('').iloc[0]
     decimals = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Decimals'].iloc[0]
 
+    # Layout
+    grouped_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Grouped'].iloc[0]
+    normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
+
     # Plot the average data using Plotly's bar chart
-    average_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Average'].iloc[0]
-    if average_chart:
-        dfa = df.groupby('Blockchain').agg({'Values': 'mean'}).sort_values('Values', ascending=False).reset_index()
-        fig = px.bar(dfa, x='Blockchain', y='Values', color='Blockchain', title=f"Average Daily {title}", log_y=(option_scale == 'Log'))
-        fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Transactions', xaxis={'categoryorder':'total ascending'}, hovermode='x unified')
-        fig.update_traces(hovertemplate=f"{unit}%{{y:,.{decimals}f}}<extra></extra>")
-        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+    if grouped_chart:
+        if normalized_chart:
+            c1, c2 = st.columns(2)
+            with c1:
+                dfg = df.groupby('Blockchain').agg({'Values': 'mean'}).sort_values('Values', ascending=False).reset_index()
+                fig = px.bar(dfg, x='Blockchain', y='Values', color='Blockchain', title=f"Average Daily {title}", log_y=(option_scale == 'Log'))
+                fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, xaxis={'categoryorder':'total ascending'}, hovermode='x unified')
+                fig.update_traces(hovertemplate=f"{unit}%{{y:,.{decimals}f}}<extra></extra>")
+                st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+            with c2:
+                dfg = df.groupby('Blockchain').agg({'Values': 'sum'}).sort_values('Values', ascending=False).reset_index()
+                fig = px.pie(dfg, values='Values', names='Blockchain', title=f"Share of {title}", hole=0.4)
+                fig.update_traces(textinfo='percent+label', textposition='inside')
+                st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+        else:
+            dfg = df.groupby('Blockchain').agg('mean').sort_values('Values', ascending=False).reset_index()
+            fig = px.bar(dfg, x='Blockchain', y='Values', color='Blockchain', title=f"Average Daily {title}", log_y=(option_scale == 'Log'))
+            fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=yaxis, xaxis={'categoryorder':'total ascending'}, hovermode='x unified')
+            fig.update_traces(hovertemplate=f"{unit}%{{y:,.{decimals}f}}<extra></extra>")
+            st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # Plot the daily data using Plotly's line chart
     df = df.sort_values(['Date', 'Values'], ascending=[False, False]).reset_index(drop=True)
@@ -169,7 +187,6 @@ else:
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # Plot the daily normalized data using Plotly's area chart
-    normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
     if normalized_chart:
         fig = go.Figure()
         for i in df[series].unique():
