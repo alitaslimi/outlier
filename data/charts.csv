@@ -1,14 +1,14 @@
-Segment,Metric,Aggregation,Title,Y Axis,Average,Normalized,Heatmap,Unit,Decimals,Description
+Segment,Metric,Aggregation,Title,Y Axis,Grouped,Normalized,Heatmap,Unit,Decimals,Description
 Addresses,Active Users,Blockchain,Number of Active Users,Addresses,TRUE,TRUE,FALSE,,0,The number of unique addresses that were active as the initiator of a successful transaction.
 Transactions,Transaction Count,Blockchain,Number of Transactions,Transactions,TRUE,TRUE,FALSE,,0,The total number of transactions whether it has been successful or not.
 Transactions,TPS,Blockchain,Transactions per Second,Transactions,TRUE,FALSE,FALSE,,2,The number of transactions per second whether it has been successful or not.
 Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],TRUE,FALSE,FALSE,%,2,The success rate of transactions in percent.
-Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],FALSE,TRUE,FALSE,$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
-Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],FALSE,FALSE,FALSE,$,4,The median amount of fees per transaction in U.S. dollars.
-Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],FALSE,FALSE,FALSE,$,4,The average amount of fees per transaction in U.S. dollars.
-Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,FALSE,TRUE,FALSE,,0,The total amount of gas used to conduct transactions.
-Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,FALSE,FALSE,FALSE,,0,The median amount of gas used per transaction.
-Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,FALSE,FALSE,FALSE,,0,The average amount of gas used per transaction.
+Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],TRUE,TRUE,FALSE,$,0,The total amount of fees in U.S. dollars paid to conduct transactions.
+Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],TRUE,FALSE,FALSE,$,4,The median amount of fees per transaction in U.S. dollars.
+Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],TRUE,FALSE,FALSE,$,4,The average amount of fees per transaction in U.S. dollars.
+Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,TRUE,TRUE,FALSE,,0,The total amount of gas used to conduct transactions.
+Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,TRUE,FALSE,FALSE,,0,The median amount of gas used per transaction.
+Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,TRUE,FALSE,FALSE,,0,The average amount of gas used per transaction.
 DEXs,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],FALSE,TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
 DEXs,Swaps Volume,Exchange,Total Swaps Volume [USD],Volume [USD],FALSE,TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
 DEXs,Swap Count,Blockchain,Total Number of Swaps,Transactions,FALSE,TRUE,FALSE,,0,The total number of swap transactions.
