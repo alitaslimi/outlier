@@ -132,10 +132,10 @@ series = option_aggregation
 if option_aggregation != 'Blockchain':
     df_print = df.query(f"{option_aggregation} == {option_aggregates}")
     if len(option_aggregates) > 1:
-        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg('sum').reset_index()
+        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', option_aggregation]).agg({'Values': 'sum'}).reset_index()
     else:
         series = 'Blockchain'
-        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', 'Blockchain']).agg('sum').reset_index()
+        df = df.query(f"{option_aggregation} == {option_aggregates}").groupby(['Date', 'Blockchain']).agg({'Values': 'sum'}).reset_index()
 
 # Checks whether the minimum number of blockchains is selected or not
 # Currently, the limit is at least 2 blockchains
@@ -156,6 +156,7 @@ else:
     # Layout
     grouped_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Grouped'].iloc[0]
     normalized_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Normalized'].iloc[0]
+    heatmap_chart = charts.query("Segment == @option_segments & Metric == @option_metrics & Aggregation == @option_aggregation")['Heatmap'].iloc[0]
 
     # Plot the average data using Plotly's bar chart
     if grouped_chart:
@@ -201,6 +202,12 @@ else:
                 hovertemplate="%{customdata}: %{y:,.1f}%<extra></extra>"
             ))
         fig.update_layout(title=f'Daily Share of {title}', hovermode='x unified')
+        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+    if heatmap_chart:
+        df['Normalized'] = df.groupby('Blockchain')['Values'].transform(lambda x: (x - x.min()) / (x.max() - x.min()))
+        fig = px.density_heatmap(df, x='Date', y='Blockchain', z='Normalized', histfunc='avg', title=f"Daily Heatmap of Normalized {title}", nbinsx=(option_dates[1] - option_dates[0]).days+1)
+        fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, coloraxis_colorbar=dict(title='Min/Max'))
         st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
     # View and download the data in a CSV format
