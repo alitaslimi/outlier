@@ -9,11 +9,11 @@ Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],TRUE,
 Fees,Total Gas Used,Blockchain,Total Gas Used,Gas,TRUE,TRUE,TRUE,,0,The total amount of gas used to conduct transactions.
 Fees,Median Gas Used,Blockchain,Median Gas Used,Gas,TRUE,FALSE,TRUE,,0,The median amount of gas used per transaction.
 Fees,Average Gas Used,Blockchain,Average Gas Used,Gas,TRUE,FALSE,TRUE,,0,The average amount of gas used per transaction.
-DEXs,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],FALSE,TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars.
+DEXs,Swaps Volume,Blockchain,Total Swaps Volume [USD],Volume [USD],TRUE,TRUE,TRUE,$,0,The total volume of swaps in U.S. dollars.
 DEXs,Swaps Volume,Exchange,Total Swaps Volume [USD],Volume [USD],FALSE,TRUE,FALSE,$,0,The total volume of swaps in U.S. dollars on each decentralized exchange.
-DEXs,Swap Count,Blockchain,Total Number of Swaps,Transactions,FALSE,TRUE,FALSE,,0,The total number of swap transactions.
+DEXs,Swap Count,Blockchain,Total Number of Swaps,Transactions,TRUE,TRUE,TRUE,,0,The total number of swap transactions.
 DEXs,Swap Count,Exchange,Total Number of Swaps,Transactions,FALSE,TRUE,FALSE,,0,The total number of swap transactions on each decentralized exchange.
-DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,FALSE,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions.
+DEXs,Swappers,Blockchain,Total Number of Swappers,Addresses,TRUE,TRUE,TRUE,,0,The total number of unique addresses conducting swap transactions.
 DEXs,Swappers,Exchange,Total Number of Swappers,Addresses,FALSE,TRUE,FALSE,,0,The total number of unique addresses conducting swap transactions on each decentralized exchange.
 CEXs,Net Flow,Exchange,Total Net Flow Volume,Volume [USD],FALSE,FALSE,FALSE,$,0,The total net flow volume in U.S. dollars through each centralized exchange.
 CEXs,Inflows,Exchange,Total Inflow Volume,Volume [USD],FALSE,TRUE,FALSE,$,0,The total inflowing volume in U.S. dollars through each centralized exchange.

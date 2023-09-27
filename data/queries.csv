@@ -45,8 +45,13 @@ CEXs,Outflows,Exchange,Optimism,c685f15f-7c7f-47c6-b04d-0c9395fc1b12
 CEXs,Outflows,Exchange,Polygon,cbb2a0e6-3078-4edd-bfb8-9c6344d1435c
 DEXs,Swap Count,Blockchain,Arbitrum,6019de71-a5bd-4fa4-8628-5d17cf2003a8
 DEXs,Swap Count,Blockchain,Avalanche,4e06bc87-afb3-4223-8ced-f0a25aa2bf6f
+DEXs,Swap Count,Blockchain,Base,f34b3add-af96-474e-981d-88d4c076efa1
+DEXs,Swap Count,Blockchain,BSC,e7c6170d-c141-4446-af3b-77ef84a284a1
 DEXs,Swap Count,Blockchain,Ethereum,284632e5-bca5-4a15-9707-bdb6609bb7bb
+DEXs,Swap Count,Blockchain,Gnosis,575b36bf-73e5-4b53-ace3-23de975bccf4
+DEXs,Swap Count,Blockchain,NEAR,f638ee92-1c34-4109-8dd2-a7d0f0be42b4
 DEXs,Swap Count,Blockchain,Optimism,184b95ce-d3f3-4e36-a0fb-0179f3a8465b
+DEXs,Swap Count,Blockchain,Osmosis,92465a6f-6041-4d2f-b2ad-ca4377e3e725
 DEXs,Swap Count,Blockchain,Polygon,44665774-aced-4f55-99bb-4315910c57d3
 DEXs,Swap Count,Blockchain,Solana,0977fb66-ede4-4f0b-a5d5-28f1ec43f81e
 DEXs,Swap Count,Exchange,Arbitrum,bd42774d-840c-436b-89de-92e6bca57433
@@ -56,8 +61,13 @@ DEXs,Swap Count,Exchange,Optimism,60ea0db3-1d11-447e-b3d4-88dbf001f3e0
 DEXs,Swap Count,Exchange,Polygon,1fe76bca-112b-4a6b-b115-25861bc210f4
 DEXs,Swappers,Blockchain,Arbitrum,5edbe541-fdbc-4b8f-a772-89f0477a3e0c
 DEXs,Swappers,Blockchain,Avalanche,cc38455e-00a4-4a57-8806-03029e27ab9e
+DEXs,Swappers,Blockchain,Base,cab04c6a-ce3f-4a9c-83a8-429f41e8d10f
+DEXs,Swappers,Blockchain,BSC,71308c36-10fb-47e5-88eb-b614c312845e
 DEXs,Swappers,Blockchain,Ethereum,0cb35868-7c2d-46ba-8eb3-064d1f189f1b
+DEXs,Swappers,Blockchain,Gnosis,63356307-eccb-424f-a533-51272b0cb4d7
+DEXs,Swappers,Blockchain,NEAR,c339f98b-5f96-4f1b-826c-8f33f67ffda6
 DEXs,Swappers,Blockchain,Optimism,e4dd6977-4bd1-446f-a8ea-125eba34fc66
+DEXs,Swappers,Blockchain,Osmosis,f3bbbfcf-fe49-4543-8669-10a9a3c274f6
 DEXs,Swappers,Blockchain,Polygon,55c52afa-6247-4789-85e4-6dfe713cdae1
 DEXs,Swappers,Blockchain,Solana,9e3ab1b1-7de4-41c4-88cb-340cac90f849
 DEXs,Swappers,Exchange,Arbitrum,b7fb520a-94ea-45dc-988a-2460d2d1d24b
@@ -67,8 +77,13 @@ DEXs,Swappers,Exchange,Optimism,f7052188-60f6-4554-9f6f-f224ed896015
 DEXs,Swappers,Exchange,Polygon,7e781002-9519-4368-85f6-d90e55e51876
 DEXs,Swaps Volume,Blockchain,Arbitrum,30089143-ecab-4655-81b1-5e143b1c7a6c
 DEXs,Swaps Volume,Blockchain,Avalanche,e6dd88cf-b149-4da1-8fc0-5964b287be8d
+DEXs,Swaps Volume,Blockchain,Base,2cc2d9fa-39eb-4633-93ae-bf3e0999dc45
+DEXs,Swaps Volume,Blockchain,BSC,efa4e2dc-f765-4afd-9e79-eb988496b535
 DEXs,Swaps Volume,Blockchain,Ethereum,ca269175-7673-498c-8dcd-d3d9d49ad676
+DEXs,Swaps Volume,Blockchain,Gnosis,05e5549e-1cc0-418c-a33a-a3e700990f92
+DEXs,Swaps Volume,Blockchain,NEAR,c7ab7542-dc5a-4150-9377-d8b56cfc9c1c
 DEXs,Swaps Volume,Blockchain,Optimism,3c21498b-39e4-4577-a5dc-ba82e0be9feb
+DEXs,Swaps Volume,Blockchain,Osmosis,43fda6f4-e98d-45b3-9dd3-b185db097ab0
 DEXs,Swaps Volume,Blockchain,Polygon,50435741-d998-4254-854b-efc741b4da17
 DEXs,Swaps Volume,Exchange,Arbitrum,2bf410c2-6efa-4a7e-81b5-9d812953c6d5
 DEXs,Swaps Volume,Exchange,Avalanche,0806540f-b6d0-475a-bfb1-664b03696954
@@ -78,6 +93,8 @@ DEXs,Swaps Volume,Exchange,Polygon,97087c8d-e874-4b57-af72-19cba65b9850
 Fees,Average Fees,Blockchain,Arbitrum,1d4bdcb3-1256-4bb2-87ce-ee0c5cc60761
 Fees,Average Fees,Blockchain,Avalanche,a546299f-e714-42f5-9e27-ca9f4dbdd8db
 Fees,Average Fees,Blockchain,Axelar,a1190275-84e9-4997-b33d-e9aec984344e
+Fees,Average Fees,Blockchain,Base,da963eef-1406-43bf-8cf7-57ee04b802bc
+Fees,Average Fees,Blockchain,Bitcoin,36af399b-5772-400b-921e-1f017abd9093
 Fees,Average Fees,Blockchain,BSC,a4d7d4e2-a221-4b06-955d-386f08c3f99e
 Fees,Average Fees,Blockchain,Ethereum,5310f3ee-e6c7-4dc5-b370-a63b14eb7b48
 Fees,Average Fees,Blockchain,Gnosis,c7e4003e-68f6-4002-8072-3bf5ee5d6826
@@ -85,10 +102,12 @@ Fees,Average Fees,Blockchain,NEAR,40f343ad-e442-49aa-b921-41b79301bbd6
 Fees,Average Fees,Blockchain,Optimism,dfc2e40c-5a73-4979-b2fa-755f8f0389e4
 Fees,Average Fees,Blockchain,Osmosis,be33a059-1ea4-4896-89f0-e43041d4fdd1
 Fees,Average Fees,Blockchain,Polygon,a7eaadd1-ea92-458e-90c3-68946ad5924a
+Fees,Average Fees,Blockchain,Sei,0cb0f320-417b-49b9-a78e-378e262d64d4
 Fees,Average Fees,Blockchain,Solana,9cc5cc16-9f11-4d9f-a9ee-c02936dac8ca
 Fees,Average Gas Used,Blockchain,Arbitrum,69a1ce1b-54a0-4dbb-a019-b03769e72dfe
 Fees,Average Gas Used,Blockchain,Avalanche,db918c53-f346-4453-b81b-d9c4a804f2fd
 Fees,Average Gas Used,Blockchain,Axelar,5a8bc17e-0d43-4491-b978-5be650e99e7d
+Fees,Average Gas Used,Blockchain,Base,63bee2fa-8bc7-410c-863b-438518943327
 Fees,Average Gas Used,Blockchain,BSC,0f3aad5e-632a-423d-95fe-079a88975a87
 Fees,Average Gas Used,Blockchain,Ethereum,2633da45-9b70-48f1-bcc2-79a6c3ee23ca
 Fees,Average Gas Used,Blockchain,NEAR,b30c2b96-727a-4500-ad00-2a2fd807f899
@@ -98,6 +117,8 @@ Fees,Average Gas Used,Blockchain,Polygon,9996c756-5aae-41cb-8bea-a6c7a50f320b
 Fees,Median Fees,Blockchain,Arbitrum,00c77329-a486-43af-8a2b-22b29775fd72
 Fees,Median Fees,Blockchain,Avalanche,7f7a47a8-3a41-429f-a819-a623c3707c7e
 Fees,Median Fees,Blockchain,Axelar,806db7a1-14f1-4e94-9b2c-be39bcf111e8
+Fees,Median Fees,Blockchain,Base,6e217a60-97da-49c9-a62f-a0298fea0887
+Fees,Median Fees,Blockchain,Bitcoin,efa37d8a-dcb8-4cc3-8cc0-755a2552b509
 Fees,Median Fees,Blockchain,BSC,ca8165cd-eaab-48ec-a225-fda194006b48
 Fees,Median Fees,Blockchain,Ethereum,848403da-3562-4845-9a49-4ed975a7ac5c
 Fees,Median Fees,Blockchain,Gnosis,f552c268-2e02-4bb3-b049-bc6f6f54058d
@@ -109,6 +130,7 @@ Fees,Median Fees,Blockchain,Solana,fab0cdae-dd2f-49bb-9f93-e87f926e9b3c
 Fees,Median Gas Used,Blockchain,Arbitrum,25b8abca-71fe-44f2-8624-80f91bbfcca0
 Fees,Median Gas Used,Blockchain,Avalanche,1d3d3305-9778-45b1-8b5a-60c92a47af11
 Fees,Median Gas Used,Blockchain,Axelar,7755b499-e9a7-4e20-befc-738e31251dbf
+Fees,Median Gas Used,Blockchain,Base,056db63b-ef3b-43b9-9c91-2cca1402ce4f
 Fees,Median Gas Used,Blockchain,BSC,f015d814-61a4-48c5-bdb9-cd57d7a005ac
 Fees,Median Gas Used,Blockchain,Ethereum,8805f945-5c5e-4b6d-8c05-ef77cbfb30bf
 Fees,Median Gas Used,Blockchain,Gnosis,ecb6a4c8-64f8-494f-b364-e3a3dfc2ef01
@@ -119,6 +141,8 @@ Fees,Median Gas Used,Blockchain,Polygon,16f29502-1418-47aa-a2cf-19915e6bead0
 Fees,Total Fees,Blockchain,Arbitrum,3ad37308-fbc0-4099-b5a6-33bd0f30d8c4
 Fees,Total Fees,Blockchain,Avalanche,8a19e1d3-479a-425c-9553-bf6f5da35613
 Fees,Total Fees,Blockchain,Axelar,2f6567e5-b7a8-4626-945a-b9f893848ece
+Fees,Total Fees,Blockchain,Base,c1225c6b-f572-49eb-8579-f7e91aea8a01
+Fees,Total Fees,Blockchain,Bitcoin,0f3465ec-01de-488a-aaac-6459ad5b8248
 Fees,Total Fees,Blockchain,BSC,8a03f11f-ac64-4b58-9fa4-b9679abfbb87
 Fees,Total Fees,Blockchain,Ethereum,6a38f86f-971f-4811-a0a1-c401e0597ed8
 Fees,Total Fees,Blockchain,Gnosis,0fb6d747-ca2d-466c-83f8-4de0b0aa3a7f
@@ -126,10 +150,12 @@ Fees,Total Fees,Blockchain,NEAR,f1f3fe9a-847a-4798-9c64-94e3ec87562f
 Fees,Total Fees,Blockchain,Optimism,c95ad36a-ffb0-41ae-8594-d5e204ffac2c
 Fees,Total Fees,Blockchain,Osmosis,39ed12fb-36b7-447f-8c05-d6f233c611ff
 Fees,Total Fees,Blockchain,Polygon,efd9069e-9cfb-49ae-9a17-42322b3ec8f5
+Fees,Total Fees,Blockchain,Sei,7ede2388-5251-46f0-9f50-5ebf64eb3e24
 Fees,Total Fees,Blockchain,Solana,c085bb0d-6b80-4969-91f8-3cf9fa144ccf
 Fees,Total Gas Used,Blockchain,Arbitrum,5b08007b-0627-40ac-b7db-78de72fb9308
 Fees,Total Gas Used,Blockchain,Avalanche,69a1bceb-645b-49a6-84db-886a0f6a336c
 Fees,Total Gas Used,Blockchain,Axelar,3a06f4d0-960c-49f2-bee1-3f601e9f20b6
+Fees,Total Gas Used,Blockchain,Base,e4a42da5-8e69-416f-8f82-6ddd900a399c
 Fees,Total Gas Used,Blockchain,BSC,b0e5c8b9-4816-4307-8cc1-965a5c85d4ea
 Fees,Total Gas Used,Blockchain,Ethereum,44d2937c-b11c-4478-8408-3a0dcd79cb6c
 Fees,Total Gas Used,Blockchain,Gnosis,89b42f15-7cfc-4e0a-b20b-80643e89f0d2
