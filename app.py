@@ -11,6 +11,12 @@ from datetime import date, datetime, timedelta
 
 st.set_page_config(page_title='Outlier - Blockchain Analytics', page_icon=':sparkles:', layout='wide')
 
+# Warning
+st.warning("""
+    This app is not in an active development state. In case of witnessing missing data or outliers,
+    please contact the developer of this app using the contact information at the bottom of the page.
+""")
+
 # ------------------------------ Filters ------------------------------ #
 
 # Variables
