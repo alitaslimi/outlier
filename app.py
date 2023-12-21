@@ -76,13 +76,14 @@ else:
     for blockchain in option_blockchains:
         if df[df['Blockchain'] == blockchain]['Date'].iloc[0] < str(date.today() - timedelta(1)):
             query_id = queries.query("Segment == @option_segments & Metric == @option_metrics & Blockchain == @blockchain & Aggregation == @option_aggregation")['Query'].iloc[0]
-            query_result = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{query_id}/data/latest")
+            storage_options = {'User-Agent': 'Mozilla/5.0'}
+            query_result = pd.read_json(f"https://flipsidecrypto.xyz/api/v1/queries/{query_id}/data/latest", storage_options=storage_options)
             query_result['Blockchain'] = blockchain
             query_result['Date'] = query_result['Date'].dt.strftime('%Y-%m-%d')
             df = pd.concat([query_result[~query_result['Date'].isin(df[df['Blockchain'] == blockchain]['Date'])], df]).sort_values(['Date', 'Blockchain'], ascending=[False, True]).reset_index(drop=True)
 
     if local_save:
-        df.to_csv(data_file, index=False)
+        df.to_csv(data_file, index=False, lineterminator='\n')
 
 # Date Alignment
 # Removes the last date if it only contains a portion of blockchains instead of all of them
