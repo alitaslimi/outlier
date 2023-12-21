@@ -1,4 +1,5 @@
 Segment,Metric,Aggregation,Blockchain,Query
+Addresses,Active Users,Blockchain,Aptos,d04cdd3b-7bf3-4714-a9af-fe8b1adfcf39
 Addresses,Active Users,Blockchain,Arbitrum,782b10f0-07a8-4684-9b91-19d76e5bd375
 Addresses,Active Users,Blockchain,Avalanche,df3cd9e3-bab6-4827-a43b-d0d250fadfc6
 Addresses,Active Users,Blockchain,Axelar,a1448fa8-4ddc-4b9b-a051-75e4eb84a6c5
@@ -237,6 +238,7 @@ Transactions,TPS,Blockchain,Osmosis,f6fb8a54-ca9b-47f3-ab72-10ec36c557c5
 Transactions,TPS,Blockchain,Polygon,8f7da9c8-b854-46fa-b2b1-b8d83eb1f961
 Transactions,TPS,Blockchain,Sei,23163d9e-f717-4f2b-8ccb-f4dfc1304a2a
 Transactions,TPS,Blockchain,Solana,f584e505-6134-48fb-86b4-2c7bb0b85be6
+Transactions,Transaction Count,Blockchain,Aptos,c31c9d44-e25e-4295-8add-cce8800f2d5d
 Transactions,Transaction Count,Blockchain,Arbitrum,7548f19b-d7cb-4fb2-8ed1-75ffefebae15
 Transactions,Transaction Count,Blockchain,Avalanche,278d4896-0e1a-4697-9551-f12529567920
 Transactions,Transaction Count,Blockchain,Axelar,9ebbfd40-82f3-432f-a321-a20f721eb422
