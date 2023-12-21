@@ -28,19 +28,19 @@ c1, c2, c3 = st.columns(3)
 with c1:
     option_segments = st.selectbox(
         label='**Segment**',
-        options=charts['Segment'].unique(),
+        options=charts.query("Active == True")['Segment'].unique(),
         key='option_segments'
     )
 with c2:
     option_metrics = st.selectbox(
         label='**Metric**',
-        options=charts.query("Segment == @option_segments")['Metric'].unique(),
+        options=charts.query("Active == True and Segment == @option_segments")['Metric'].unique(),
         key='option_metrics'
     )
 with c3:
     option_aggregation = st.selectbox(
         label='**Aggregation**',
-        options=charts.query("Segment == @option_segments & Metric == @option_metrics")['Aggregation'].unique(),
+        options=charts.query("Active == True and Segment == @option_segments & Metric == @option_metrics")['Aggregation'].unique(),
         key='option_aggregation'
     )
 
