@@ -1,8 +1,8 @@
 Segment,Metric,Aggregation,Title,Y Axis,Grouped,Normalized,Heatmap,Unit,Decimals,Active,Description
 Addresses,Active Users,Blockchain,Number of Active Users,Addresses,TRUE,TRUE,TRUE,,0,TRUE,The number of unique addresses that were active as the initiator of a successful transaction.
 Transactions,Transaction Count,Blockchain,Number of Transactions,Transactions,TRUE,TRUE,TRUE,,0,TRUE,The total number of transactions whether it has been successful or not.
-Transactions,TPS,Blockchain,Transactions per Second,Transactions,TRUE,FALSE,TRUE,,2,FALSE,The number of transactions per second whether it has been successful or not.
-Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],TRUE,FALSE,TRUE,%,2,FALSE,The success rate of transactions in percent.
+Transactions,TPS,Blockchain,Transactions per Second,Transactions,TRUE,FALSE,TRUE,,2,TRUE,The number of transactions per second whether it has been successful or not.
+Transactions,Success Rate,Blockchain,Transaction Success Rate,Success Rate [%],TRUE,FALSE,TRUE,%,2,TRUE,The success rate of transactions in percent.
 Fees,Total Fees,Blockchain,Total Transaction Fees [USD],Fees [USD],TRUE,TRUE,TRUE,$,0,FALSE,The total amount of fees in U.S. dollars paid to conduct transactions.
 Fees,Median Fees,Blockchain,Median Fees per Transaction [USD],Fees [USD],TRUE,FALSE,TRUE,$,4,FALSE,The median amount of fees per transaction in U.S. dollars.
 Fees,Average Fees,Blockchain,Average Fees per Transaction [USD],Fees [USD],TRUE,FALSE,TRUE,$,4,FALSE,The average amount of fees per transaction in U.S. dollars.
