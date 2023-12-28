@@ -27,4 +27,4 @@ NFTs,Traded Collections,Blockchain,Total Number of Traded NFT Collections,Collec
 Tokens,Transfer Count,Blockchain,Total Number of Token Transfers,Transactions,FALSE,TRUE,FALSE,,0,FALSE,The total number of token transfer transactions.
 Tokens,Senders,Blockchain,Total Number of Senders,Addresses,FALSE,TRUE,FALSE,,0,FALSE,The total number of unique addresses conducting transfer transactions as their senders.
 Tokens,Receivers,Blockchain,Total Number of Receivers,Addresses,FALSE,TRUE,FALSE,,0,FALSE,The total number of unique addresses conducting transfer transactions as their receivers.
-Blocks,Block Count,Blockchain,Total Number of Blocks,Blocks,TRUE,TRUE,TRUE,,0,FALSE,The total number of blocks created.
+Blocks,Block Count,Blockchain,Total Number of Blocks,Blocks,TRUE,TRUE,TRUE,,0,TRUE,The total number of blocks created.
